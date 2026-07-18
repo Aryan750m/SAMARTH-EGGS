@@ -358,22 +358,32 @@ header.scrolled .mobile-menu-toggle {
 
 @media (max-width: 768px) {
   .stats-section .grid-4 {
-    gap: var(--spacing-xs);
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    gap: var(--spacing-sm) !important;
+    padding: 10px var(--spacing-xs);
+    scrollbar-width: none; /* Hide standard scrollbar */
+  }
+  .stats-section .grid-4::-webkit-scrollbar {
+    display: none; /* Hide Chrome/Safari scrollbar */
   }
   .stat-card {
-    padding: var(--spacing-sm) 4px;
-    border-top-width: 3px;
+    flex: 0 0 150px !important;
+    padding: var(--spacing-md) var(--spacing-xs);
+    border-top-width: 4px;
   }
   .stat-icon {
-    font-size: 1.4rem;
-    margin-bottom: 2px;
+    font-size: 1.6rem;
+    margin-bottom: 5px;
   }
   .stat-number {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .stat-label {
-    font-size: 0.55rem;
-    letter-spacing: 0;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
   }
 }
 
