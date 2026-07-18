@@ -45,6 +45,19 @@
     z-index: 1000;
   }
   
+  .nav-actions {
+    display: none !important;
+  }
+  
+  .mobile-only-action {
+    display: block !important;
+    width: 100%;
+  }
+  
+  .logo-text {
+    font-size: 1.4rem;
+  }
+  
   /* About Summary */
   .about-summary {
     grid-template-columns: 1fr;

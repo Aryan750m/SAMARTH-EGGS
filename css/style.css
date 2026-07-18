@@ -563,3 +563,9 @@ footer {
   z-index: 1001;
   width: 0%;
 }
+
+
+/* Hide mobile only drawer nav items on desktop */
+.mobile-only-action {
+  display: none;
+}
