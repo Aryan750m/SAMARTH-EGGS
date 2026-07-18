@@ -1,0 +1,111 @@
+/* Keyframes & Core Animation CSS */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatEgg {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes pulseYellow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 212, 0, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 212, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 212, 0, 0);
+  }
+}
+
+@keyframes preloaderSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-fade-left {
+  opacity: 0;
+  animation: fadeInLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-fade-right {
+  opacity: 0;
+  animation: fadeInRight 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* Delay modifiers */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Micro-animations & Interactive Effects */
+.float-egg-element {
+  animation: floatEgg 5s ease-in-out infinite;
+}
+
+.pulse-btn {
+  animation: pulseYellow 2s infinite;
+}
+
+/* Scroll Animation Hooks (used by JS intersections) */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}

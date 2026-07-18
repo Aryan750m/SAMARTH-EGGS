@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 50" width="220" height="50">
+  <circle cx="25" cy="25" r="20" fill="#FFD400"/>
+  <path d="M25 12C19 12 15 18 15 26C15 32 19 35 25 35C31 35 35 32 35 26C35 18 31 12 25 12Z" fill="#FFFFFF"/>
+  <circle cx="25" cy="26" r="6" fill="#FFD400"/>
+  <text x="55" y="32" font-family="'Bebas Neue', 'Poppins', sans-serif" font-size="24" font-weight="bold" fill="#FFD400" letter-spacing="1">SAMARTH</text>
+  <text x="145" y="32" font-family="'Bebas Neue', 'Poppins', sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" letter-spacing="1">EGGS</text>
+</svg>

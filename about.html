@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Samarth Eggs Center</title>
+  <meta name="description" content="Learn about Samarth Eggs Center story, mission, vision, and our state-of-the-art cold storage infrastructure. Serving fresh eggs since 2016.">
+  
+  <link rel="canonical" href="https://samartheggscenter.com/about.html">
+  <meta property="og:title" content="About Us | Samarth Eggs Center">
+  <meta property="og:description" content="Learn about Samarth Eggs Center story, mission, vision, and our state-of-the-art cold storage infrastructure.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samartheggscenter.com/about.html">
+  <meta property="og:image" content="https://samartheggscenter.com/logo.jpeg">
+  
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .about-header {
+      background: linear-gradient(rgba(17,17,17,0.7), rgba(17,17,17,0.9)), #ebd234;
+      padding: 8rem 0 4rem 0;
+      color: var(--white);
+      text-align: center;
+    }
+    .about-header h1 {
+      font-size: 4rem;
+      color: var(--primary);
+    }
+    .mission-vision-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-xl);
+    }
+    .mv-card {
+      background-color: var(--white);
+      border: 1px solid var(--gray-border);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+    .mv-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    .infra-section {
+      background-color: var(--gray-light);
+    }
+    .infra-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: var(--spacing-xl);
+      align-items: center;
+    }
+    .team-member {
+      text-align: center;
+      background: var(--white);
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius-lg);
+      padding: var(--spacing-md);
+      transition: var(--transition-normal);
+    }
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .team-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--gray-light);
+      margin: 0 auto var(--spacing-sm) auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: var(--gray);
+    }
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-md);
+      text-align: center;
+      margin-top: var(--spacing-lg);
+    }
+    .cert-item {
+      padding: var(--spacing-md);
+      background-color: var(--white);
+      border: 2px dashed var(--gray-border);
+      border-radius: var(--radius-md);
+    }
+    .cert-item i {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: var(--spacing-xs);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header class="scrolled">
+    <div class="container navbar">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: var(--spacing-sm);">
+        <img src="assets/images/logo/logo.jpeg" alt="Samarth Eggs Mascot Logo" style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
+        <span class="logo-text">SAMARTH EGGS</span>
+      </a>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="bulk-order.html">Bulk Orders</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+919876543210" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Header -->
+  <div class="about-header">
+    <div class="container">
+      <h1>Our Story &amp; Philosophy</h1>
+      <p style="color: var(--gray-light);">Committed to fresh farm supply chain and food safety since 2016.</p>
+    </div>
+  </div>
+
+  <!-- Story Section -->
+  <section class="section-padding">
+    <div class="container reveal-item">
+      <div class="about-summary">
+        <div>
+          <h2>From Humble Roots to Leading Supplier</h2>
+          <p>Founded with the core goal of supplying unprocessed, fresh, hygienic eggs, Samarth Eggs Center has grown from a single poultry distribution channel into a reliable commercial supply partner servicing over 500 hotels, retail bakeries, and food companies.</p>
+          <p>We source daily from our modern, Bio-Secured farms where layers are cared for in stress-free conditions, fed a customized nutrient-balanced mash, and undergo clean mechanical packaging procedures.</p>
+        </div>
+        <div>
+          <img src="assets/images/about/about-story.webp" alt="Poultry farm hens feeding" loading="lazy" style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius-lg);">
+        </div>
+      </div>
+
+      <!-- Mission & Vision -->
+      <div class="mission-vision-grid">
+        <div class="mv-card">
+          <i class="fas fa-bullseye"></i>
+          <h3 style="color: var(--dark);">Our Mission</h3>
+          <p>To deliver farm-to-table freshness daily, optimizing delivery logistics for food manufacturers while maintaining the highest international hygiene and nutritional standards.</p>
+        </div>
+        <div class="mv-card">
+          <i class="fas fa-eye"></i>
+          <h3 style="color: var(--dark);">Our Vision</h3>
+          <p>To establish Samarth Eggs Center as the gold standard of premium egg supply nationwide, leading through sustainable farming, automated sorting, and cold storage innovations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infrastructure Section -->
+  <section class="section-padding infra-section">
+    <div class="container infra-grid reveal-item">
+      <div>
+        <img src="assets/images/about/cold-storage.webp" alt="Cold storage egg warehouse crates" loading="lazy" style="width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+      </div>
+      <div>
+        <h2>Modern Warehouse &amp; Cold Storage</h2>
+        <p>Egg freshness is highly sensitive to external temperatures. To preserve the high protein content and thick yolk structure, Samarth Eggs Center operates custom-built temperature-controlled hubs.</p>
+        <p>Our packaging units process up to 100,000 eggs per day, utilizing mechanical graders to separate sizes (Small, Medium, Large, Extra Large) and reject cracked shells instantly using light-candling inspections.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Operations Tour -->
+  <section class="section-padding">
+    <div class="container reveal-item">
+      <div class="text-center mb-xl">
+        <h2>Our Facility &amp; Operations Tour</h2>
+        <p>A visual walkthrough of our daily poultry, sorting, warehousing, and shipping operations.</p>
+      </div>
+      <div class="grid-3">
+        <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:250px;">
+          <img src="assets/images/about/farm-overview.webp" alt="Poultry farm buildings" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">Farm Overview</div>
+        </div>
+        <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:250px;">
+          <img src="assets/images/about/workers-collect.webp" alt="Farmer collecting fresh eggs" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">Egg Harvesting</div>
+        </div>
+        <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:250px;">
+          <img src="assets/images/about/packaging-line.webp" alt="Egg sorting packaging line" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+          <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">Packaging Line</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-xl">
+        <h2>Our Executive Leadership</h2>
+        <p>Led by poultry pioneers and supply chain professionals committed to service excellence.</p>
+      </div>
+      <div class="grid-3 reveal-item">
+        <div class="team-member">
+          <img src="assets/images/team/samarth.svg" alt="Samarth Patil" loading="lazy" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: var(--spacing-sm);">
+          <h3>Samarth Patil</h3>
+          <p style="color: var(--primary); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 5px;">Founder &amp; Director</p>
+          <p>Over 15 years of poultry management and organic farming experience.</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/images/team/anjali.svg" alt="Anjali R." loading="lazy" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: var(--spacing-sm);">
+          <h3>Anjali R.</h3>
+          <p style="color: var(--primary); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 5px;">Head of Quality Control</p>
+          <p>Oversees chemical screening, candling process, and FDA compliance.</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/images/team/vikram.svg" alt="Vikram Sen" loading="lazy" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: var(--spacing-sm);">
+          <h3>Vikram Sen</h3>
+          <p style="color: var(--primary); font-weight: 600; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 5px;">Logistics Manager</p>
+          <p>Manages fresh distribution fleet scheduling and routing efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section class="section-padding" style="background-color: var(--gray-light);">
+    <div class="container">
+      <div class="text-center mb-xl">
+        <h2>Quality Certificates</h2>
+        <p>Our operations comply with key food safety, sanitation, and dietary inspection standards.</p>
+      </div>
+      <div class="certs-grid reveal-item">
+        <div class="cert-item">
+          <i class="fas fa-award"></i>
+          <h3 style="font-size: 1.1rem; color: var(--dark);">FSSAI Approved</h3>
+          <p style="font-size: 0.8rem; color: var(--gray);">Safe food handling.</p>
+        </div>
+        <div class="cert-item">
+          <i class="fas fa-shield-halved"></i>
+          <h3 style="font-size: 1.1rem; color: var(--dark);">ISO 22000</h3>
+          <p style="font-size: 0.8rem; color: var(--gray);">Food Safety System.</p>
+        </div>
+        <div class="cert-item">
+          <i class="fas fa-heart"></i>
+          <h3 style="font-size: 1.1rem; color: var(--dark);">HACCP Rules</h3>
+          <p style="font-size: 0.8rem; color: var(--gray);">Hazard inspection done.</p>
+        </div>
+        <div class="cert-item">
+          <i class="fas fa-thumbs-up"></i>
+          <h3 style="font-size: 1.1rem; color: var(--dark);">100% Halal Feed</h3>
+          <p style="font-size: 0.8rem; color: var(--gray);">Natural vegetarian grain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Samarth Eggs</h3>
+        <p style="color: var(--gray);">Leading wholesale supplier of premium fresh farm eggs. Delivering nutritional excellence daily to commercial culinary operations, markets, and homes.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="whatsapp-chat-trigger"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Our Products</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="quality.html">Quality Assurance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html">Organic Eggs</a></li>
+          <li><a href="products.html">Brown Country Eggs</a></li>
+          <li><a href="products.html">Regular Farm Eggs</a></li>
+          <li><a href="products.html">Duck Eggs</a></li>
+          <li><a href="products.html">Protein Fortified Eggs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and nutrition guides.</p>
+        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+          <input type="email" placeholder="Your Email Address" required>
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="js/navbar.js" defer></script>
+  <script src="js/lazyload.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

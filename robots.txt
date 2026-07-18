@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Exclude backend mail directory
+Disallow: /php/
+
+# Define sitemap location
+Sitemap: https://samartheggscenter.com/sitemap.xml

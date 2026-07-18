@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | Samarth Eggs Center</title>
+  <meta name="description" content="Browse our wide selection of fresh eggs. Organic eggs, brown eggs, country eggs, duck eggs, and wholesale packages at competitive prices.">
+  
+  <link rel="canonical" href="https://samartheggscenter.com/products.html">
+  <meta property="og:title" content="Our Products | Samarth Eggs Center">
+  <meta property="og:description" content="Browse our wide selection of fresh eggs. Organic eggs, brown eggs, country eggs, duck eggs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samartheggscenter.com/products.html">
+  <meta property="og:image" content="https://samartheggscenter.com/logo.jpeg">
+  
+  <link class="favicon" rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .products-header {
+      background: linear-gradient(rgba(17,17,17,0.7), rgba(17,17,17,0.9)), #ebd234;
+      padding: 8rem 0 4rem 0;
+      color: var(--white);
+      text-align: center;
+    }
+    .products-header h1 {
+      font-size: 4rem;
+      color: var(--primary);
+    }
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-xl);
+    }
+    .filter-btn {
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius-full);
+      background: var(--white);
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition-fast);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: var(--dark);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header class="scrolled">
+    <div class="container navbar">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: var(--spacing-sm);">
+        <img src="assets/images/logo/logo.jpeg" alt="Samarth Eggs Mascot Logo" style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
+        <span class="logo-text">SAMARTH EGGS</span>
+      </a>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="bulk-order.html">Bulk Orders</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+919876543210" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Products Banner Header -->
+  <div class="products-header">
+    <div class="container">
+      <h1>Our Products Range</h1>
+      <p style="color: var(--gray-light);">Freshness and nutrition packed in every shell.</p>
+    </div>
+  </div>
+
+  <!-- Products Catalog -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Catalog Filter -->
+      <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterProducts('all', this)">All Eggs</button>
+        <button class="filter-btn" onclick="filterProducts('white', this)">White Eggs</button>
+        <button class="filter-btn" onclick="filterProducts('brown', this)">Brown Eggs</button>
+        <button class="filter-btn" onclick="filterProducts('country', this)">Country Eggs</button>
+        <button class="filter-btn" onclick="filterProducts('organic', this)">Organic Eggs</button>
+        <button class="filter-btn" onclick="filterProducts('jumbo', this)">Jumbo Eggs</button>
+        <button class="filter-btn" onclick="filterProducts('duck', this)">Duck Eggs</button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="product-grid reveal-item" id="catalog-grid">
+        <!-- Card 1 -->
+        <div class="product-card" data-category="white">
+          <div class="product-image">
+            <img src="assets/images/products/regular-eggs.webp" alt="Regular White Eggs" loading="lazy">
+            <span class="product-tag">Fresh Daily</span>
+          </div>
+          <div class="product-details-content">
+            <h3 class="product-title">Regular White Eggs</h3>
+            <p>High-grade, clean white eggs collected daily, sorted for optimal sizes. Recommended for diners and general kitchen operations.</p>
+            <div class="product-meta">
+              <span class="product-price">Wholesale Rates</span>
+              <a href="product-details.html?type=regular" style="color: var(--primary-hover); font-weight:600;">View Details &rarr;</a>
+            </div>
+            <a href="bulk-order.html" class="btn btn-primary" style="width: 100%; margin-top: 15px; border-radius: var(--radius-md);">Send Bulk Inquiry</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="product-card" data-category="organic">
+          <div class="product-image">
+            <img src="assets/images/products/organic-eggs.webp" alt="Organic Free-Range Eggs" loading="lazy">
+            <span class="product-tag">Organic</span>
+          </div>
+          <div class="product-details-content">
+            <h3 class="product-title">Organic Free-Range Eggs</h3>
+            <p>100% organic feed compliant. Non-GMO grains, antibiotic-free. Ideal for health-focused grocery outlets.</p>
+            <div class="product-meta">
+              <span class="product-price">Specialty Price</span>
+              <a href="product-details.html?type=organic" style="color: var(--primary-hover); font-weight:600;">View Details &rarr;</a>
+            </div>
+            <a href="bulk-order.html" class="btn btn-primary" style="width: 100%; margin-top: 15px; border-radius: var(--radius-md);">Send Bulk Inquiry</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="product-card" data-category="brown">
+          <div class="product-image">
+            <img src="assets/images/products/organic-eggs.webp" alt="Premium Brown Eggs" loading="lazy">
+            <span class="product-tag">Free-Range</span>
+          </div>
+          <div class="product-details-content">
+            <h3 class="product-title">Premium Brown Eggs</h3>
+            <p>Rich amber colored shells from organic free range layers. Exceptionally firm yolk profile preferred by bakers.</p>
+            <div class="product-meta">
+              <span class="product-price">Wholesale Rates</span>
+              <a href="product-details.html?type=brown" style="color: var(--primary-hover); font-weight:600;">View Details &rarr;</a>
+            </div>
+            <a href="bulk-order.html" class="btn btn-primary" style="width: 100%; margin-top: 15px; border-radius: var(--radius-md);">Send Bulk Inquiry</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="product-card" data-category="country">
+          <div class="product-image">
+            <img src="assets/images/products/organic-eggs.webp" alt="Country Eggs" loading="lazy">
+            <span class="product-tag">Country Breed</span>
+          </div>
+          <div class="product-details-content">
+            <h3 class="product-title">Country Eggs</h3>
+            <p>Pure country eggs sourced from smallholders. Rich earthy flavors, ideal for high protein dietary intake.</p>
+            <div class="product-meta">
+              <span class="product-price">Premium Rates</span>
+              <a href="product-details.html?type=brown" style="color: var(--primary-hover); font-weight:600;">View Details &rarr;</a>
+            </div>
+            <a href="bulk-order.html" class="btn btn-primary" style="width: 100%; margin-top: 15px; border-radius: var(--radius-md);">Send Bulk Inquiry</a>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="product-card" data-category="jumbo">
+          <div class="product-image">
+            <img src="assets/images/products/protein-eggs.webp" alt="Jumbo Farm Eggs" loading="lazy">
+            <span class="product-tag">Jumbo size</span>
+          </div>
+          <div class="product-details-content">
+            <h3 class="product-title">Jumbo Farm Eggs</h3>
+            <p>Specially selected oversized eggs (60g+). Perfect for diner poaching and high albumen volume recipes.</p>
+            <div class="product-meta">
+              <span class="product-price">Jumbo Price</span>
+              <a href="product-details.html?type=protein" style="color: var(--primary-hover); font-weight:600;">View Details &rarr;</a>
+            </div>
+            <a href="bulk-order.html" class="btn btn-primary" style="width: 100%; margin-top: 15px; border-radius: var(--radius-md);">Send Bulk Inquiry</a>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="product-card" data-category="duck">
+          <div class="product-image">
+            <img src="assets/images/products/duck-eggs.webp" alt="Fresh Duck Eggs" loading="lazy">
+            <span class="product-tag">Specialty</span>
+          </div>
+          <div class="product-details-content">
+            <h3 class="product-title">Fresh Duck Eggs</h3>
+            <p>Larger than chicken eggs, high fat content and thick albumen. Excellent culinary performance for chefs.</p>
+            <div class="product-meta">
+              <span class="product-price">Specialty Price</span>
+              <a href="product-details.html?type=duck" style="color: var(--primary-hover); font-weight:600;">View Details &rarr;</a>
+            </div>
+            <a href="bulk-order.html" class="btn btn-primary" style="width: 100%; margin-top: 15px; border-radius: var(--radius-md);">Send Bulk Inquiry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Samarth Eggs</h3>
+        <p style="color: var(--gray);">Leading wholesale supplier of premium fresh farm eggs. Delivering nutritional excellence daily to commercial culinary operations, markets, and homes.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="whatsapp-chat-trigger"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Our Products</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="quality.html">Quality Assurance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html">Organic Eggs</a></li>
+          <li><a href="products.html">Brown Country Eggs</a></li>
+          <li><a href="products.html">Regular Farm Eggs</a></li>
+          <li><a href="products.html">Duck Eggs</a></li>
+          <li><a href="products.html">Protein Fortified Eggs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and nutrition guides.</p>
+        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+          <input type="email" placeholder="Your Email Address" required>
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="js/navbar.js" defer></script>
+  <script src="js/lazyload.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script>
+    function filterProducts(category, buttonEl) {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      buttonEl.classList.add('active');
+
+      const cards = document.querySelectorAll('#catalog-grid .product-card');
+      cards.forEach(card => {
+        const itemCategory = card.getAttribute('data-category');
+        if (category === 'all' || itemCategory === category) {
+          card.style.display = 'block';
+          setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 50);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.9)';
+          setTimeout(() => { card.style.display = 'none'; }, 200);
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* responsive.css - Media Queries */
+@import url('variables.css');
+
+@media (max-width: 1200px) {
+  h1 { font-size: 3.5rem; }
+  h2 { font-size: 2.6rem; }
+  .hero-content h1 { font-size: 5rem; }
+}
+
+@media (max-width: 992px) {
+  /* Layout */
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  
+  /* Hero */
+  .hero-content h1 { font-size: 4rem; }
+  .hero-content p { font-size: 1.2rem; }
+
+  /* Navbar */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--dark-light);
+    flex-direction: column;
+    padding: var(--spacing-xxl) var(--spacing-md) var(--spacing-md) var(--spacing-md);
+    transition: right var(--transition-slow);
+    box-shadow: var(--shadow-lg);
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links a {
+    color: var(--white);
+    font-size: 1.1rem;
+  }
+  
+  .mobile-menu-toggle {
+    display: block;
+    z-index: 1000;
+  }
+  
+  /* About Summary */
+  .about-summary {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  /* Timeline */
+  .timeline {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+  }
+  
+  .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    top: 0;
+  }
+  
+  .timeline-step {
+    width: 100%;
+    padding: 0;
+  }
+
+  /* Contact layout */
+  .contact-section-layout {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.8rem; }
+  h2 { font-size: 2.2rem; }
+  
+  .hero-content h1 { font-size: 3rem; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .grid-4 { grid-template-columns: 1fr; }
+  
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-btns .btn {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .form-group-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  .hero-content h1 { font-size: 2.4rem; }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .about-badge {
+    padding: 1rem;
+    bottom: -10px;
+    right: -10px;
+  }
+  
+  .about-badge span {
+    font-size: 1.5rem;
+  }
+}

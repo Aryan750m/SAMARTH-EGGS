@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Samarth Eggs Center</title>
+  <meta name="description" content="View photo galleries of Samarth Eggs Poultry farms, packaging centers, logistics fleet, and storage warehouses.">
+  
+  <link rel="canonical" href="https://samartheggscenter.com/gallery.html">
+  <meta property="og:title" content="Gallery | Samarth Eggs Center">
+  <meta property="og:description" content="View photo galleries of Samarth Eggs Poultry farms, packaging centers, logistics fleet.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samartheggscenter.com/gallery.html">
+  <meta property="og:image" content="https://samartheggscenter.com/logo.jpeg">
+  
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .gallery-header {
+      background: linear-gradient(rgba(17,17,17,0.7), rgba(17,17,17,0.9)), #ebd234;
+      padding: 8rem 0 4rem 0;
+      color: var(--white);
+      text-align: center;
+    }
+    .gallery-header h1 {
+      font-size: 4rem;
+      color: var(--primary);
+    }
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin-bottom: var(--spacing-xl);
+    }
+    .gallery-filter-btn {
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--gray-border);
+      border-radius: var(--radius-full);
+      background: var(--white);
+      cursor: pointer;
+      font-weight: 500;
+      transition: var(--transition-fast);
+    }
+    .gallery-filter-btn.active, .gallery-filter-btn:hover {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: var(--dark);
+    }
+    .gallery-masonry {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--spacing-md);
+    }
+    .gallery-item-wrapper {
+      position: relative;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+      cursor: pointer;
+    }
+    .gallery-item-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .gallery-img-placeholder {
+      height: 250px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: var(--font-headings);
+    }
+    .gallery-item-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(17, 17, 17, 0.4);
+      opacity: 0;
+      transition: var(--transition-fast);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 2rem;
+    }
+    .gallery-item-wrapper:hover .gallery-item-overlay {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header class="scrolled">
+    <div class="container navbar">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: var(--spacing-sm);">
+        <img src="assets/images/logo/logo.jpeg" alt="Samarth Eggs Mascot Logo" style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
+        <span class="logo-text">SAMARTH EGGS</span>
+      </a>
+      
+      <button class="mobile-menu-toggle" aria-label="Toggle Navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="bulk-order.html">Bulk Orders</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:+919876543210" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Gallery Header -->
+  <div class="gallery-header">
+    <div class="container">
+      <h1>Media Gallery</h1>
+      <p style="color: var(--gray-light);">Take a virtual tour of our poultry processes and facility standards.</p>
+    </div>
+  </div>
+
+  <!-- Gallery Content -->
+  <section class="section-padding">
+    <div class="container">
+      <!-- Filter Controls -->
+      <div class="gallery-filters">
+        <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
+        <button class="gallery-filter-btn" data-filter="farms">Poultry Farms</button>
+        <button class="gallery-filter-btn" data-filter="warehouse">Warehouse &amp; Cold Storage</button>
+        <button class="gallery-filter-btn" data-filter="packaging">Packaging Process</button>
+        <button class="gallery-filter-btn" data-filter="delivery">Logistics Fleet</button>
+      </div>
+
+      <!-- Masonry Layout -->
+      <div class="gallery-masonry reveal-item">
+        <!-- Item 1 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
+          <img src="assets/images/gallery/layer-shed.webp" alt="Poultry Layer Shed" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+        
+        <!-- Item 2 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="warehouse">
+          <img src="assets/images/gallery/cold-unit.webp" alt="Cold Storage Unit" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
+          <img src="assets/images/gallery/sorting-line.webp" alt="Automatic Sorting Line" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="delivery">
+          <img src="assets/images/gallery/delivery-fleet.webp" alt="Delivery Van Fleet" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
+          <img src="assets/images/gallery/hens-feed.webp" alt="Hens Feeding in Yard" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
+          <img src="assets/images/gallery/tray-loading.webp" alt="Molded Pulp Tray Loading" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 7 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
+          <img src="assets/images/gallery/farm-building.webp" alt="Poultry Farm Infrastructure" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 8 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
+          <img src="assets/images/gallery/egg-collection.webp" alt="Fresh Egg Harvesting Nest" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 9 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="delivery">
+          <img src="assets/images/gallery/loading-trucks.webp" alt="Loading Delivery Logistics" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 10 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
+          <img src="assets/images/gallery/staff-inspect.webp" alt="Hygienic Quality Selection" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 11 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
+          <img src="assets/images/gallery/packaging-box.webp" alt="Shipping Box Packaging" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+
+        <!-- Item 12 -->
+        <div class="gallery-item-wrapper lightbox-trigger" data-category="warehouse">
+          <img src="assets/images/gallery/cold-unit.webp" alt="Walk-in Temperature Storage" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
+          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Samarth Eggs</h3>
+        <p style="color: var(--gray);">Leading wholesale supplier of premium fresh farm eggs. Delivering nutritional excellence daily to commercial culinary operations, markets, and homes.</p>
+        <div class="footer-socials">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="whatsapp-chat-trigger"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Our Products</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="quality.html">Quality Assurance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Products</h3>
+        <ul class="footer-links">
+          <li><a href="products.html">Organic Eggs</a></li>
+          <li><a href="products.html">Brown Country Eggs</a></li>
+          <li><a href="products.html">Regular Farm Eggs</a></li>
+          <li><a href="products.html">Duck Eggs</a></li>
+          <li><a href="products.html">Protein Fortified Eggs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and nutrition guides.</p>
+        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+          <input type="email" placeholder="Your Email Address" required>
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="js/navbar.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/lazyload.js" defer></script>
+  <script src="js/scroll.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
