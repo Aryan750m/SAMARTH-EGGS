@@ -1,6 +1,6 @@
 /* counter.js - Stats Number Counter Animation */
 document.addEventListener('DOMContentLoaded', () => {
-  const counterElements = document.querySelectorAll('.stat-number');
+  const counterElements = document.querySelectorAll('.stat-number, .bento-card__number, .glass-stat-card__number');
 
   const startCounter = (el) => {
     const target = parseInt(el.getAttribute('data-target'), 10) || 0;

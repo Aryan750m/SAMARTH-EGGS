@@ -11,23 +11,29 @@
   /* Layout */
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
   
   /* Hero */
   .hero-content h1 { font-size: 4rem; }
   .hero-content p { font-size: 1.2rem; }
 
-  /* Navbar */
+  /* Upgraded 2026 Mobile Responsive Menu */
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 280px;
+    width: 300px;
     height: 100vh;
-    background-color: var(--dark-light);
+    background: rgba(17, 17, 17, 0.85);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
     flex-direction: column;
-    padding: var(--spacing-xxl) var(--spacing-md) var(--spacing-md) var(--spacing-md);
-    transition: right var(--transition-slow);
-    box-shadow: var(--shadow-lg);
+    justify-content: center;
+    padding: var(--spacing-xxl) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+    gap: 1.2rem;
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
     z-index: 999;
   }
   
@@ -36,13 +42,27 @@
   }
   
   .nav-links a {
-    color: var(--white);
-    font-size: 1.1rem;
+    color: var(--white) !important;
+    font-size: 1.15rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-full);
+  }
+
+  .nav-links a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--nagpal-yellow) !important;
+  }
+
+  .nav-links a.active {
+    background: var(--nagpal-green) !important;
+    color: var(--white) !important;
   }
   
   .mobile-menu-toggle {
     display: block;
-    z-index: 1000;
+    z-index: 1001;
   }
   
   .nav-actions {
@@ -53,11 +73,19 @@
     display: block !important;
     width: 100%;
   }
-  
+
+  .mobile-only-action .btn {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    text-align: center;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+  }
+
   .logo-text {
     font-size: 1.4rem;
   }
-  
   /* About Summary */
   .about-summary {
     grid-template-columns: 1fr;
@@ -104,6 +132,7 @@
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: 1fr; }
+  .product-grid { grid-template-columns: 1fr; }
   
   .hero-btns {
     flex-direction: column;

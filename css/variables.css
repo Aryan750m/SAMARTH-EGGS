@@ -45,4 +45,12 @@
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Nagpal Egg Theme Colors & Icons */
+  --nagpal-green: #018549;
+  --nagpal-green-hover: #006b3a;
+  --nagpal-yellow: #f2aa34;
+  --nagpal-yellow-hover: #d59124;
+  --whatsapp-green: #25D366;
+  --whatsapp-green-hover: #128C7E;
 }
