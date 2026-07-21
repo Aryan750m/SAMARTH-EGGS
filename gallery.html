@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | Samarth Eggs Center</title>
-  <meta name="description" content="View photo galleries of Samarth Eggs Poultry farms, packaging centers, logistics fleet, and storage warehouses.">
+  <title>Media Gallery | Samarth Eggs Center</title>
+  <meta name="description" content="Explore photo galleries of Samarth Eggs biosecure poultry farms, cold storage warehouses, packaging lines, and logistics fleet.">
   
   <link rel="canonical" href="https://samartheggscenter.com/gallery.html">
-  <meta property="og:title" content="Gallery | Samarth Eggs Center">
-  <meta property="og:description" content="View photo galleries of Samarth Eggs Poultry farms, packaging centers, logistics fleet.">
+  <meta property="og:title" content="Media Gallery | Samarth Eggs Center">
+  <meta property="og:description" content="Explore photo galleries of Samarth Eggs biosecure poultry farms, cold storage warehouses, packaging lines, and logistics fleet.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://samartheggscenter.com/gallery.html">
   <meta property="og:image" content="https://samartheggscenter.com/logo.jpeg">
@@ -18,83 +18,125 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <style>
-    .gallery-header {
-      background: linear-gradient(rgba(17,17,17,0.7), rgba(17,17,17,0.9)), #ebd234;
-      padding: 8rem 0 4rem 0;
-      color: var(--white);
-      text-align: center;
-    }
-    .gallery-header h1 {
-      font-size: 4rem;
-      color: var(--primary);
-    }
     .gallery-filters {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: var(--spacing-sm);
-      margin-bottom: var(--spacing-xl);
+      gap: 0.6rem;
+      margin-bottom: 2.5rem;
+      background: var(--white);
+      padding: 0.5rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      border: 1px solid var(--gray-border);
+      width: fit-content;
+      margin-inline: auto;
     }
     .gallery-filter-btn {
-      padding: 0.6rem 1.5rem;
-      border: 1px solid var(--gray-border);
+      padding: 0.6rem 1.4rem;
+      border: none;
       border-radius: var(--radius-full);
-      background: var(--white);
+      background: transparent;
       cursor: pointer;
-      font-weight: 500;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text-muted);
       transition: var(--transition-fast);
     }
     .gallery-filter-btn.active, .gallery-filter-btn:hover {
-      background-color: var(--primary);
-      border-color: var(--primary);
-      color: var(--dark);
+      background-color: var(--nagpal-green);
+      color: var(--white);
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
     }
-    .gallery-masonry {
+    .gallery-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: var(--spacing-md);
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 1.5rem;
     }
-    .gallery-item-wrapper {
+    .gallery-card {
       position: relative;
       border-radius: var(--radius-lg);
       overflow: hidden;
       box-shadow: var(--shadow-sm);
-      transition: var(--transition-normal);
+      transition: all var(--transition-normal);
       cursor: pointer;
+      background: var(--dark);
+      border: 1px solid var(--gray-border);
     }
-    .gallery-item-wrapper:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
+    .gallery-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-premium);
+      border-color: var(--nagpal-green);
     }
-    .gallery-img-placeholder {
-      height: 250px;
+    .gallery-card__img-container {
+      position: relative;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 1.2rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      font-family: var(--font-headings);
+      height: 250px;
+      overflow: hidden;
     }
-    .gallery-item-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
+    .gallery-card__img-container img {
       width: 100%;
       height: 100%;
-      background-color: rgba(17, 17, 17, 0.4);
-      opacity: 0;
-      transition: var(--transition-fast);
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .gallery-card:hover .gallery-card__img-container img {
+      transform: scale(1.08);
+    }
+    .gallery-card__badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(17, 17, 17, 0.75);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: var(--nagpal-yellow);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border: 1px solid rgba(242, 170, 52, 0.3);
+      z-index: 2;
+    }
+    .gallery-card__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 65%, transparent 100%);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      z-index: 2;
+    }
+    .gallery-card__title {
+      color: var(--white);
+      font-family: var(--font-headings);
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+    .gallery-card__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--nagpal-green);
+      color: var(--white);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--primary);
-      font-size: 2rem;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      transition: var(--transition-fast);
     }
-    .gallery-item-wrapper:hover .gallery-item-overlay {
-      opacity: 1;
+    .gallery-card:hover .gallery-card__icon {
+      background: var(--nagpal-yellow);
+      color: var(--dark);
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -124,24 +166,25 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="products.html">Products</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+919876543210" class="btn btn-primary" style="display: block; text-align: center; color: var(--dark) !important; padding: 0.8rem;"><i class="fas fa-phone-alt"></i> Call Us</a></li>
+        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+919876543210" class="btn btn-primary" style="display: block; text-align: center; color: var(--dark) !important; padding: 0.8rem;"><i class="fas fa-phone"></i> Call Us</a></li>
         <li class="mobile-only-action" style="margin-top: var(--spacing-xs);"><a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="display: block; text-align: center; color: var(--white) !important; padding: 0.8rem;"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="tel:+919876543210" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="tel:+919876543210" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fas fa-phone"></i> Call</a>
         <a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
       </div>
     </div>
   </header>
 
   <!-- Gallery Header -->
-  <div class="gallery-header">
+  <div class="page-header gallery-header-bg">
     <div class="container">
+      <span class="hero-eyebrow" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: var(--nagpal-yellow); margin-bottom: 0.5rem;">Facility &amp; Operations Tour</span>
       <h1>Media Gallery</h1>
-      <p style="color: var(--gray-light);">Take a virtual tour of our poultry processes and facility standards.</p>
+      <p style="color: rgba(255, 255, 255, 0.85); max-width: 600px; margin-inline: auto;">Take a virtual tour of our biosecure poultry layer sheds, automated sorting lines, and logistics fleet.</p>
     </div>
   </div>
 
@@ -152,83 +195,155 @@
       <div class="gallery-filters">
         <button class="gallery-filter-btn active" data-filter="all">All Photos</button>
         <button class="gallery-filter-btn" data-filter="farms">Poultry Farms</button>
-        <button class="gallery-filter-btn" data-filter="warehouse">Warehouse &amp; Cold Storage</button>
-        <button class="gallery-filter-btn" data-filter="packaging">Packaging Process</button>
+        <button class="gallery-filter-btn" data-filter="warehouse">Cold Storage</button>
+        <button class="gallery-filter-btn" data-filter="packaging">Packaging &amp; Sorting</button>
         <button class="gallery-filter-btn" data-filter="delivery">Logistics Fleet</button>
       </div>
 
-      <!-- Masonry Layout -->
-      <div class="gallery-masonry reveal-item">
+      <!-- Gallery Grid -->
+      <div class="gallery-grid reveal-item">
         <!-- Item 1 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
-          <img src="assets/images/gallery/layer-shed.webp" alt="Poultry Layer Shed" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="farms">
+          <span class="gallery-card__badge">Poultry Farm</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/layer-shed.webp" alt="Biosecure Layer Nesting Shed" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Biosecure Layer Nesting Shed</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
         
         <!-- Item 2 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="warehouse">
-          <img src="assets/images/gallery/cold-unit.webp" alt="Cold Storage Unit" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="warehouse">
+          <span class="gallery-card__badge">Cold Storage</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/cold-unit.webp" alt="Walk-in Cold Storage Vault" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Walk-in Cold Storage Vault</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 3 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
-          <img src="assets/images/gallery/sorting-line.webp" alt="Automatic Sorting Line" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="packaging">
+          <span class="gallery-card__badge">Packaging</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/sorting-line.webp" alt="Automated Candling &amp; Sorting Line" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Automated Candling &amp; Sorting</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 4 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="delivery">
-          <img src="assets/images/gallery/delivery-fleet.webp" alt="Delivery Van Fleet" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="delivery">
+          <span class="gallery-card__badge">Logistics</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/delivery-fleet.webp" alt="Temperature-Controlled Delivery Fleet" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Temperature-Controlled Fleet</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 5 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
-          <img src="assets/images/gallery/hens-feed.webp" alt="Hens Feeding in Yard" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="farms">
+          <span class="gallery-card__badge">Poultry Farm</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/hens-feed.webp" alt="Organic Layer Feeding Yard" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Organic Layer Feeding Yard</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 6 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
-          <img src="assets/images/gallery/tray-loading.webp" alt="Molded Pulp Tray Loading" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="packaging">
+          <span class="gallery-card__badge">Packaging</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/tray-loading.webp" alt="Molded Pulp Tray Assembly" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Molded Pulp Tray Assembly</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 7 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
-          <img src="assets/images/gallery/farm-building.webp" alt="Poultry Farm Infrastructure" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="farms">
+          <span class="gallery-card__badge">Poultry Farm</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/farm-building.webp" alt="Biosecure Farm Infrastructure" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Biosecure Farm Facility</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 8 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="farms">
-          <img src="assets/images/gallery/egg-collection.webp" alt="Fresh Egg Harvesting Nest" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="farms">
+          <span class="gallery-card__badge">Poultry Farm</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/egg-collection.webp" alt="Sunrise Nest Egg Harvesting" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Sunrise Nest Egg Harvesting</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 9 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="delivery">
-          <img src="assets/images/gallery/loading-trucks.webp" alt="Loading Delivery Logistics" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="delivery">
+          <span class="gallery-card__badge">Logistics</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/loading-trucks.webp" alt="Daily Logistics Dispatch" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Daily Logistics Dispatch</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 10 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
-          <img src="assets/images/gallery/staff-inspect.webp" alt="Hygienic Quality Selection" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="packaging">
+          <span class="gallery-card__badge">Packaging</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/staff-inspect.webp" alt="Hygienic Manual Quality Selection" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Manual Quality Verification</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 11 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="packaging">
-          <img src="assets/images/gallery/packaging-box.webp" alt="Shipping Box Packaging" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="packaging">
+          <span class="gallery-card__badge">Packaging</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/packaging-box.webp" alt="Bulk Master Carton Packaging" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Bulk Master Carton Packaging</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
 
         <!-- Item 12 -->
-        <div class="gallery-item-wrapper lightbox-trigger" data-category="warehouse">
-          <img src="assets/images/gallery/cold-unit.webp" alt="Walk-in Temperature Storage" loading="lazy" class="w-100 h-100" style="object-fit: cover;">
-          <div class="gallery-item-overlay"><i class="fas fa-search-plus"></i></div>
+        <div class="gallery-card lightbox-trigger" data-category="warehouse">
+          <span class="gallery-card__badge">Cold Storage</span>
+          <div class="gallery-card__img-container">
+            <img src="assets/images/gallery/cold-unit.webp" alt="Chilled Logistics Staging Vault" loading="lazy">
+          </div>
+          <div class="gallery-card__overlay">
+            <h3 class="gallery-card__title">Chilled Staging Vault</h3>
+            <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
+          </div>
         </div>
       </div>
     </div>
@@ -248,45 +363,44 @@
         </div>
       </div>
       <div class="footer-col">
-        <h3>Quick Links</h3>
+        <h4>Quick Links</h4>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Our Products</a></li>
-          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3>Products</h3>
+        <h4>Our Products</h4>
         <ul class="footer-links">
-          <li><a href="products.html">Organic Eggs</a></li>
-          <li><a href="products.html">Brown Country Eggs</a></li>
-          <li><a href="products.html">Regular Farm Eggs</a></li>
-          <li><a href="products.html">Duck Eggs</a></li>
-          <li><a href="products.html">Protein Fortified Eggs</a></li>
+          <li><a href="products.html">Regular White Eggs</a></li>
+          <li><a href="products.html">Organic Free Range</a></li>
+          <li><a href="products.html">Premium Brown Eggs</a></li>
+          <li><a href="products.html">Country Eggs</a></li>
+          <li><a href="products.html">Jumbo White Eggs</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h3>Newsletter</h3>
-        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and nutrition guides.</p>
-        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
-          <input type="email" placeholder="Your Email Address" required>
-          <button type="submit">Join</button>
-        </form>
+        <h4>Contact Us</h4>
+        <p style="color: var(--gray); margin-bottom: 0.5rem;"><i class="fas fa-map-marker-alt"></i> Samarth Eggs Center, Main Market Road, India</p>
+        <p style="color: var(--gray); margin-bottom: 0.5rem;"><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p style="color: var(--gray);"><i class="fas fa-envelope"></i> info@samartheggscenter.com</p>
       </div>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.</p>
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p>&copy; 2026 Samarth Eggs Center. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
-  <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
+  <a href="#" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
+  <script src="js/main.js" defer></script>
   <script src="js/navbar.js" defer></script>
   <script src="js/gallery.js" defer></script>
   <script src="js/lazyload.js" defer></script>
-  <script src="js/scroll.js" defer></script>
-  <script src="js/main.js" defer></script>
 </body>
 </html>

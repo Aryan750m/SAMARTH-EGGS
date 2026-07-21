@@ -71,10 +71,10 @@
   <!-- Scroll Progress Indicator -->
   <div id="scroll-progress"></div>
   <!-- Header & Sticky Navbar -->
-  <header class="transparent-dark">
+  <header class="scrolled">
     <div class="container navbar">
       <a href="index.html" class="logo" style="display: flex; align-items: center; gap: var(--spacing-sm);">
-        <img src="assets/images/logo/logo.jpeg" alt="Samarth Eggs Mascot Logo">
+        <img src="assets/images/logo/logo.jpeg" alt="Samarth Eggs Mascot Logo" style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
         <span class="logo-text">SAMARTH EGGS</span>
       </a>
       
@@ -91,12 +91,12 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+919876543210" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call Us</a></li>
+        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+919876543210" class="btn btn-primary"><i class="fas fa-phone"></i> Call Us</a></li>
         <li class="mobile-only-action" style="margin-top: var(--spacing-xs);"><a href="#" class="btn btn-secondary whatsapp-chat-trigger"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="tel:+919876543210" class="btn btn-primary"><i class="fas fa-phone-alt"></i> Call</a>
+        <a href="tel:+919876543210" class="btn btn-primary"><i class="fas fa-phone"></i> Call</a>
         <a href="#" class="btn btn-secondary whatsapp-chat-trigger"><i class="fab fa-whatsapp"></i> Chat</a>
       </div>
     </div>
@@ -130,21 +130,15 @@
     </div>
     
     <div class="container hero-content">
-      <!-- Eyebrow Badge -->
-      <span class="hero-eyebrow animate-fade-up">Premium Wholesale Supplier</span>
+      <!-- Minimal Headline -->
+      <h1 class="hero-headline animate-fade-up">Farm Fresh Eggs.<br><span style="color: var(--nagpal-yellow);">Delivered Daily.</span></h1>
       
-      <!-- Headline -->
-      <h1 class="hero-headline animate-fade-up delay-100">Farm Fresh Eggs. Delivered Daily.</h1>
-      
-      <!-- Supporting Paragraph -->
-      <p class="hero-desc animate-fade-up delay-200">Sourcing premium candidate-inspected organic, country, and brown eggs directly from biosecure farms to local grocers, bakers, and kitchens daily.</p>
-      
-      <!-- CTAs -->
-      <div class="hero-btns animate-fade-up delay-300">
+      <!-- Minimal CTAs -->
+      <div class="hero-btns animate-fade-up delay-100" style="margin-top: var(--spacing-md);">
         <a href="products.html" class="btn btn-primary pulse-btn">Explore Products</a>
         <a href="contact.html" class="btn btn-secondary">Send Inquiry</a>
       </div>
-      </div>
+    </div>
 
     <!-- Delivery Truck Animation Wrapper -->
     <div class="truck-illustration-wrapper">
@@ -159,7 +153,7 @@
         <span><i class="fas fa-check-circle"></i> FSSAI Certified</span>
       </div>
       <div class="top-bar-contact">
-        <a href="tel:+919876543210" style="color: var(--primary);"><i class="fas fa-phone-alt"></i> +91 98765 43210</a>
+        <a href="tel:+919876543210" style="color: var(--primary);"><i class="fas fa-phone"></i> +91 98765 43210</a>
       </div>
     </div>
   </div>
@@ -173,7 +167,7 @@
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--spacing-xl);">
         <span class="hero-eyebrow" style="background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.15); color: var(--nagpal-yellow); margin-bottom: var(--spacing-xs);">Our Sourcing Footprint</span>
-        <h2 style="color: var(--white); font-family: var(--font-headings); font-weight: 800; font-size: 2.8rem; letter-spacing: -0.01em; margin-bottom: var(--spacing-sm);">The Benchmark of Freshness</h2>
+        <h2 style="color: var(--white); font-family: var(--font-headings); font-weight: 700; letter-spacing: -0.01em; margin-bottom: var(--spacing-sm);">The Benchmark of Freshness</h2>
         <p style="max-width: 600px; margin-inline: auto; color: rgba(255, 255, 255, 0.7);">We connect biosecure nesting farms directly to commercial distribution points with zero quality compromises.</p>
       </div>
 
@@ -214,16 +208,16 @@
   <!-- About Summary -->
   <section class="section" style="padding: var(--spacing-xxl) 0;">
     <div class="container about-summary reveal-item">
-      <div class="about-image" style="position: relative;">
-        <img src="assets/images/about/about-story.webp" alt="Poultry farm fresh eggs sourcing yard" loading="lazy" style="width: 100%; height: 420px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-premium);">
-        <div class="about-badge" style="background: var(--nagpal-green); color: var(--white); box-shadow: var(--shadow-md); border-radius: var(--radius-md); padding: 12px 18px; position: absolute; bottom: 20px; left: 20px; display: flex; flex-direction: column; align-items: center;">
-          <span style="font-family: var(--font-headings); font-weight: 800; font-size: 1.8rem; color: var(--nagpal-yellow); line-height: 1;">15+</span>
-          <span style="font-size: 0.72rem; text-transform: uppercase; font-weight: 700; letter-spacing: 0.5px;">Years Trust</span>
+      <div class="about-image">
+        <img src="assets/images/about/about-story.webp" alt="Poultry farm fresh eggs sourcing yard" loading="lazy">
+        <div class="about-badge">
+          <span class="badge-num">15+</span>
+          <span class="badge-text">Years Trust</span>
         </div>
       </div>
       <div style="display: flex; flex-direction: column; justify-content: center;">
         <span class="hero-eyebrow" style="align-self: flex-start; margin-bottom: var(--spacing-xs);">Our Sourcing Story</span>
-        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 800; font-size: 2.8rem; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: var(--spacing-sm);">Hygienic &amp; Fresh Eggs Delivered Daily</h2>
+        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700; letter-spacing: -0.01em; line-height: 1.25; margin-bottom: var(--spacing-sm);">Hygienic &amp; Fresh Eggs Delivered Daily</h2>
         <p style="color: var(--text-muted); margin-bottom: var(--spacing-sm); line-height: 1.6;">At Samarth Eggs Center, we supply premium quality eggs directly from biosecure farms. We ensure our layers are fed organic feeds, resulting in high nutritional values and sturdier shells for transport.</p>
         <p style="color: var(--text-muted); margin-bottom: var(--spacing-md); line-height: 1.6;">Our sorting, candling, and cold chain fleet ensure that whether you are a retail store or a large commercial bakery, your bulk deliveries arrive fresh, safe, and on schedule.</p>
         <a href="about.html" class="btn btn-outline" style="width: fit-content; border: 2px solid var(--nagpal-green); color: var(--nagpal-green); font-weight: 700;">See Our Process</a>
@@ -236,7 +230,7 @@
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--spacing-xl);">
         <span class="hero-eyebrow" style="margin-bottom: var(--spacing-xs);">Egg Categories</span>
-        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 800; font-size: 2.8rem; letter-spacing: -0.01em;">Our Premium Ranges</h2>
+        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700; letter-spacing: -0.01em;">Our Premium Ranges</h2>
         <p style="max-width: 600px; margin-inline: auto; color: var(--text-muted);">Browse our catalog of fresh egg varieties structured for commercial culinary operations, grocers, and home kitchens.</p>
       </div>
       
@@ -258,7 +252,7 @@
         <!-- Category Card 2 -->
         <div class="category-card card">
           <div class="image-zoom-container" style="height: 280px; position: relative;">
-            <img src="assets/images/products/organic-eggs.webp" alt="Country Brown Eggs" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
+            <img src="assets/images/products/country-eggs.png" alt="Country Brown Eggs" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
             <a href="https://wa.me/919876543210?text=Hello%20Samarth%20Eggs%2C%20I%20am%20interested%20in%20your%20Country%20Brown%20Eggs." target="_blank" class="whatsapp-card-float" title="Enquire on WhatsApp">
               <i class="fab fa-whatsapp"></i>
             </a>
@@ -291,7 +285,7 @@
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--spacing-xl);">
         <span class="hero-eyebrow" style="margin-bottom: var(--spacing-xs);">Quality Assurance</span>
-        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 800; font-size: 2.8rem; letter-spacing: -0.01em;">Verified Sourcing &amp; Quality Checks</h2>
+        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700; letter-spacing: -0.01em;">Verified Sourcing &amp; Quality Checks</h2>
         <p style="max-width: 600px; margin-inline: auto; color: var(--text-muted);">From automated farm collection to cold chain distribution routing, freshness is candidate-inspected at every stage.</p>
       </div>
       <div class="timeline reveal-item">
@@ -329,7 +323,7 @@
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--spacing-xl);">
         <span class="hero-eyebrow" style="margin-bottom: var(--spacing-xs);">Why Choose Us</span>
-        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 800; font-size: 2.8rem; letter-spacing: -0.01em;">Why Partners Trust Samarth Eggs</h2>
+        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700; letter-spacing: -0.01em;">Why Partners Trust Samarth Eggs</h2>
         <p style="max-width: 600px; margin-inline: auto; color: var(--text-muted);">We stand apart by enforcing strict biosecurity guidelines, advanced candling verification, and temperature-controlled logistics.</p>
       </div>
 
@@ -384,7 +378,7 @@
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--spacing-xl);">
         <span class="hero-eyebrow" style="margin-bottom: var(--spacing-xs);">Client Reviews</span>
-        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 800; font-size: 2.8rem; letter-spacing: -0.01em;">What Our Partners Say</h2>
+        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700; letter-spacing: -0.01em;">What Our Partners Say</h2>
         <p style="max-width: 600px; margin-inline: auto; color: var(--text-muted);">Hear from bulk buyers, culinary groups, and wholesale partners who rely on our daily supply chains.</p>
       </div>
       
@@ -432,7 +426,7 @@
     <div class="container">
       <div class="text-center" style="margin-bottom: var(--spacing-xl);">
         <span class="hero-eyebrow" style="margin-bottom: var(--spacing-xs);">Support FAQ</span>
-        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 800; font-size: 2.8rem; letter-spacing: -0.01em;">Frequently Asked Questions</h2>
+        <h2 style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700; letter-spacing: -0.01em;">Frequently Asked Questions</h2>
         <p style="max-width: 600px; margin-inline: auto; color: var(--text-muted);">Get answers to common commercial queries regarding ordering, delivery logistics, and storage protocols.</p>
       </div>
       <div class="faq-container reveal-item">
@@ -464,10 +458,10 @@
     <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: radial-gradient(circle at 80% 20%, rgba(242, 170, 52, 0.08) 0%, transparent 50%); pointer-events:none;"></div>
     <div class="container" style="position: relative; z-index: 2; max-width: 800px; margin-inline: auto;">
       <span class="hero-eyebrow" style="background: rgba(255, 255, 255, 0.12); border-color: rgba(255, 255, 255, 0.2); color: var(--nagpal-yellow); margin-bottom: var(--spacing-xs);">Get in Touch</span>
-      <h2 style="font-family: var(--font-headings); font-size: 2.6rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: var(--spacing-sm); color: var(--white);">Power Your Business with Farm-Fresh Sourcing</h2>
+      <h2 style="font-family: var(--font-headings); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: var(--spacing-sm); color: var(--white);">Power Your Business with Farm-Fresh Sourcing</h2>
       <p style="color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; line-height: 1.6; margin-bottom: var(--spacing-md); max-width: 620px; margin-inline: auto;">Connect with us today for personalized wholesale contract terms, daily scheduled routing, and stable pricing structures tailored to your scale.</p>
       <div style="display: flex; justify-content: center; gap: var(--spacing-sm); flex-wrap: wrap;">
-        <a href="tel:+919876543210" class="btn btn-primary" style="padding: 12px 28px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);"><i class="fas fa-phone-alt"></i> Call Us Today</a>
+        <a href="tel:+919876543210" class="btn btn-primary" style="padding: 12px 28px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);"><i class="fas fa-phone"></i> Call Us Today</a>
         <a href="https://wa.me/919876543210?text=Hello%20Samarth%20Eggs%2C%20I%20am%20interested%20in%20setting%20up%20a%20wholesale%20egg%20supply%20contract." target="_blank" class="btn btn-secondary" style="padding: 12px 28px; font-weight: 700; text-transform: uppercase; font-size: 0.85rem; border-radius: var(--radius-full); background: var(--whatsapp-green); border-color: var(--whatsapp-green); color: var(--white); box-shadow: var(--shadow-sm);"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a>
       </div>
     </div>

@@ -1,12 +1,12 @@
-/* counter.js - Stats Number Counter Animation */
+/* counter.js - Smooth Zero-Shift Stats Counter Animation */
 document.addEventListener('DOMContentLoaded', () => {
   const counterElements = document.querySelectorAll('.stat-number, .bento-card__number, .glass-stat-card__number');
 
   const startCounter = (el) => {
     const target = parseInt(el.getAttribute('data-target'), 10) || 0;
     const suffix = el.getAttribute('data-suffix') || '';
-    const duration = 2000; // milliseconds
-    const frameRate = 1000 / 60; // 60fps
+    const duration = 1500; // 1.5 seconds smooth duration
+    const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
     let frame = 0;
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
   counterElements.forEach(el => observer.observe(el));
 });

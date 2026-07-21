@@ -16,6 +16,10 @@
   letter-spacing: 1.2px;
 }
 
+.btn i {
+  margin-right: 8px;
+}
+
 .btn-primary {
   background-color: var(--primary);
   color: var(--dark);
@@ -166,7 +170,7 @@
 }
 .product-image {
   position: relative;
-  height: 230px;
+  height: 200px;
   overflow: hidden;
   background-color: var(--gray-light);
 }
@@ -667,6 +671,9 @@
   line-height: 1;
   color: #02c76f; /* Bright premium green for dark backgrounds */
   margin: 0;
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  min-height: 3.5rem;
 }
 
 .glass-stat-card__title {

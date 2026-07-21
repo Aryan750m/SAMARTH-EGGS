@@ -2,9 +2,9 @@
 @import url('variables.css');
 
 @media (max-width: 1200px) {
-  h1 { font-size: 3.5rem; }
-  h2 { font-size: 2.6rem; }
-  .hero-content h1 { font-size: 5rem; }
+  .hero-content {
+    max-width: 540px;
+  }
 }
 
 @media (max-width: 992px) {
@@ -14,8 +14,9 @@
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   
   /* Hero */
-  .hero-content h1 { font-size: 4rem; }
-  .hero-content p { font-size: 1.2rem; }
+  .hero-content { padding-left: 1.5rem; width: 100%; }
+  .hero-content h1 { font-size: 3.2rem; }
+  .hero-content p { font-size: 1.1rem; }
 
   /* Upgraded 2026 Mobile Responsive Menu */
   .nav-links {
@@ -86,30 +87,68 @@
   .logo-text {
     font-size: 1.4rem;
   }
-  /* About Summary */
+  /* Mobile section padding */
+  section.section {
+    padding: 3rem 0 !important;
+  }
+  
   .about-summary {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
   
-  /* Timeline */
+  /* Mobile Process Steps Timeline */
   .timeline {
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-lg);
+    gap: 0.85rem;
+    align-items: stretch;
+    margin-top: 1.5rem;
   }
   
   .timeline::before {
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    top: 0;
+    display: none;
   }
   
   .timeline-step {
     width: 100%;
-    padding: 0;
+    padding: 0.9rem 1.1rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+    background: var(--white);
+    border: 1px solid var(--gray-border);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  .timeline-icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 1.25rem;
+    margin: 0;
+    border-width: 2px;
+    background: rgba(15, 118, 110, 0.08);
+  }
+
+  .timeline-step h3 {
+    font-size: 1.05rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .timeline-step p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  #back-to-top {
+    bottom: 20px;
+    right: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 0.95rem;
   }
 
   /* Contact layout */
@@ -125,10 +164,6 @@
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.2rem; }
-  
-  .hero-content h1 { font-size: 3rem; }
   .grid-2 { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: 1fr; }
@@ -150,22 +185,20 @@
 }
 
 @media (max-width: 480px) {
-  h1 { font-size: 2.2rem; }
-  h2 { font-size: 1.8rem; }
-  .hero-content h1 { font-size: 2.4rem; }
-  
   .footer-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
   
   .about-badge {
-    padding: 1rem;
-    bottom: -10px;
-    right: -10px;
+    padding: 10px 16px;
+    bottom: 15px;
+    left: 15px;
+    right: auto;
   }
   
-  .about-badge span {
+  .about-badge span.badge-num,
+  .about-badge span:first-child {
     font-size: 1.5rem;
   }
 }

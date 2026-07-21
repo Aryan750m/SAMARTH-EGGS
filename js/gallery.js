@@ -1,7 +1,7 @@
 /* gallery.js - Masonry Filters and Lightbox Viewer */
 document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.gallery-filter-btn');
-  const galleryItems = document.querySelectorAll('.gallery-item-wrapper');
+  const galleryItems = document.querySelectorAll('.gallery-card');
 
   // Filter functionality
   if (filterBtns.length > 0 && galleryItems.length > 0) {

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   /* Colors */
@@ -14,17 +14,17 @@
   --red: #E53935;
   --red-hover: #c62828;
   
-  /* Fonts */
-  --font-headings: 'Bebas Neue', sans-serif;
-  --font-body: 'Poppins', sans-serif;
+  /* Apple Official Typography System (SF Pro Display / SF Pro Text + Inter) */
+  --font-headings: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-xxl: 5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
 
   /* Layout Widths */
   --container-max-width: 1200px;

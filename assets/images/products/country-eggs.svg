@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <!-- Background Garden Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#4a7c36"/>
+      <stop offset="60%" stop-color="#2d5220"/>
+      <stop offset="100%" stop-color="#193310"/>
+    </radialGradient>
+    
+    <!-- Egg Gradients (Various Natural Country Tones) -->
+    <radialGradient id="eggTan1" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#f5e6d3"/>
+      <stop offset="65%" stop-color="#e0b893"/>
+      <stop offset="90%" stop-color="#c49366"/>
+      <stop offset="100%" stop-color="#9e6d42"/>
+    </radialGradient>
+    
+    <radialGradient id="eggTan2" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#fdf4e8"/>
+      <stop offset="65%" stop-color="#eccfa8"/>
+      <stop offset="90%" stop-color="#d4aa7c"/>
+      <stop offset="100%" stop-color="#af8254"/>
+    </radialGradient>
+
+    <radialGradient id="eggCream" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#f7ebd9"/>
+      <stop offset="90%" stop-color="#e2cdb2"/>
+      <stop offset="100%" stop-color="#c9b091"/>
+    </radialGradient>
+
+    <radialGradient id="eggBrown" cx="35%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#ecc6a5"/>
+      <stop offset="60%" stop-color="#cb9567"/>
+      <stop offset="90%" stop-color="#a46d3e"/>
+      <stop offset="100%" stop-color="#7d4a21"/>
+    </radialGradient>
+
+    <!-- Wicker Texture Gradient -->
+    <linearGradient id="wickerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e6c280"/>
+      <stop offset="50%" stop-color="#c29b53"/>
+      <stop offset="100%" stop-color="#8a6729"/>
+    </linearGradient>
+    
+    <linearGradient id="wickerDark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#997433"/>
+      <stop offset="100%" stop-color="#594017"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#14210c" flood-opacity="0.5"/>
+    </filter>
+    <filter id="eggShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="5" stdDeviation="4" flood-color="#2a1a0a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Farm Garden Environment -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Garden Leaves / Foliage Background Art -->
+  <path d="M 20,40 C 60,10 140,20 180,80 C 120,100 40,90 20,40 Z" fill="#5b9442" opacity="0.8"/>
+  <path d="M 620,30 C 680,10 760,40 780,110 C 720,120 640,90 620,30 Z" fill="#42782b" opacity="0.8"/>
+  <path d="M 0,450 C 80,420 160,480 140,560 C 60,570 10,500 0,450 Z" fill="#6ba84f" opacity="0.85"/>
+  <path d="M 660,430 C 740,400 800,460 790,550 C 710,560 650,490 660,430 Z" fill="#528a38" opacity="0.85"/>
+
+  <!-- Soil / Ground Shadow -->
+  <ellipse cx="400" cy="520" rx="320" ry="50" fill="#0c1706" opacity="0.6"/>
+
+  <!-- Back Wicker Basket Handles -->
+  <path d="M 120,280 C 60,180 180,120 250,230" fill="none" stroke="url(#wickerGrad)" stroke-width="24" stroke-linecap="round" filter="url(#shadow)"/>
+  <path d="M 120,280 C 60,180 180,120 250,230" fill="none" stroke="url(#wickerDark)" stroke-width="12" stroke-linecap="round"/>
+
+  <path d="M 680,280 C 740,180 620,120 550,230" fill="none" stroke="url(#wickerGrad)" stroke-width="24" stroke-linecap="round" filter="url(#shadow)"/>
+  <path d="M 680,280 C 740,180 620,120 550,230" fill="none" stroke="url(#wickerDark)" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Basket Interior Shadow -->
+  <ellipse cx="400" cy="340" rx="270" ry="110" fill="#36250e"/>
+
+  <!-- Country Eggs Stacked in Wicker Basket -->
+  <g filter="url(#eggShadow)">
+    <!-- Back Layer Eggs -->
+    <ellipse cx="270" cy="270" rx="42" ry="58" fill="url(#eggTan1)" transform="rotate(-15 270 270)"/>
+    <ellipse cx="340" cy="250" rx="45" ry="60" fill="url(#eggCream)" transform="rotate(5 340 250)"/>
+    <ellipse cx="410" cy="240" rx="44" ry="62" fill="url(#eggBrown)" transform="rotate(-8 410 240)"/>
+    <ellipse cx="480" cy="250" rx="46" ry="60" fill="url(#eggTan2)" transform="rotate(12 480 250)"/>
+    <ellipse cx="540" cy="270" rx="43" ry="58" fill="url(#eggCream)" transform="rotate(-20 540 270)"/>
+
+    <!-- Middle Layer Eggs -->
+    <ellipse cx="230" cy="310" rx="46" ry="62" fill="url(#eggBrown)" transform="rotate(25 230 310)"/>
+    <ellipse cx="300" cy="300" rx="48" ry="64" fill="url(#eggTan2)" transform="rotate(-10 300 300)"/>
+    <ellipse cx="370" cy="285" rx="50" ry="68" fill="url(#eggCream)" transform="rotate(8 370 285)"/>
+    <ellipse cx="450" cy="290" rx="49" ry="66" fill="url(#eggTan1)" transform="rotate(-6 450 290)"/>
+    <ellipse cx="520" cy="305" rx="47" ry="64" fill="url(#eggBrown)" transform="rotate(15 520 305)"/>
+    <ellipse cx="580" cy="320" rx="44" ry="60" fill="url(#eggTan2)" transform="rotate(-12 580 320)"/>
+
+    <!-- Front Overflowing Country Eggs -->
+    <ellipse cx="200" cy="360" rx="48" ry="64" fill="url(#eggTan1)" transform="rotate(-30 200 360)"/>
+    <ellipse cx="265" cy="350" rx="52" ry="70" fill="url(#eggCream)" transform="rotate(14 265 350)"/>
+    <ellipse cx="340" cy="340" rx="54" ry="72" fill="url(#eggBrown)" transform="rotate(-5 340 340)"/>
+    <ellipse cx="420" cy="335" rx="55" ry="74" fill="url(#eggTan2)" transform="rotate(10 420 335)"/>
+    <ellipse cx="500" cy="345" rx="52" ry="70" fill="url(#eggCream)" transform="rotate(-18 500 345)"/>
+    <ellipse cx="575" cy="360" rx="49" ry="66" fill="url(#eggTan1)" transform="rotate(22 575 360)"/>
+    
+    <!-- Top Highlight Country Egg -->
+    <ellipse cx="390" cy="310" rx="50" ry="68" fill="url(#eggTan1)" transform="rotate(-15 390 310)"/>
+    <text x="385" y="310" font-family="sans-serif" font-size="8.5" font-weight="bold" fill="#5c3818" opacity="0.8" transform="rotate(-15 390 310)">COUNTRY</text>
+    <text x="385" y="321" font-family="sans-serif" font-size="7.5" fill="#5c3818" opacity="0.8" transform="rotate(-15 390 310)">PURE EGGS</text>
+  </g>
+
+  <!-- Wicker Basket Body (Hand-woven Texture) -->
+  <g filter="url(#shadow)">
+    <!-- Main Basket Rim -->
+    <path d="M 140,340 C 240,420 560,420 660,340 C 680,380 620,490 540,510 C 420,530 380,530 260,510 C 180,490 120,380 140,340 Z" fill="url(#wickerGrad)"/>
+    <!-- Weave Strands -->
+    <path d="M 150,350 C 250,425 550,425 650,350" stroke="url(#wickerDark)" stroke-width="6" fill="none"/>
+    <path d="M 165,380 C 265,450 535,450 635,380" stroke="url(#wickerDark)" stroke-width="6" fill="none"/>
+    <path d="M 185,410 C 280,475 520,475 615,410" stroke="url(#wickerDark)" stroke-width="6" fill="none"/>
+    <path d="M 210,440 C 300,495 500,495 590,440" stroke="url(#wickerDark)" stroke-width="6" fill="none"/>
+    
+    <!-- Vertical Weave Ribs -->
+    <path d="M 200,360 Q 220,450 250,495" stroke="#73501a" stroke-width="5" fill="none"/>
+    <path d="M 280,375 Q 295,465 330,510" stroke="#73501a" stroke-width="5" fill="none"/>
+    <path d="M 360,380 Q 370,470 400,515" stroke="#73501a" stroke-width="5" fill="none"/>
+    <path d="M 440,380 Q 430,470 470,510" stroke="#73501a" stroke-width="5" fill="none"/>
+    <path d="M 520,375 Q 505,465 540,495" stroke="#73501a" stroke-width="5" fill="none"/>
+    <path d="M 600,360 Q 580,450 580,475" stroke="#73501a" stroke-width="5" fill="none"/>
+  </g>
+
+  <!-- Organic Country Badge -->
+  <g transform="translate(620, 80)" filter="url(#shadow)">
+    <circle cx="50" cy="50" r="46" fill="#eab308"/>
+    <circle cx="50" cy="50" r="41" fill="#0f766e"/>
+    <circle cx="50" cy="50" r="37" fill="none" stroke="#eab308" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="50" y="42" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="11" fill="#eab308">100% NATURAL</text>
+    <text x="50" y="58" text-anchor="middle" font-family="sans-serif" font-weight="800" font-size="10" fill="#ffffff" letter-spacing="0.5">COUNTRY EGGS</text>
+  </g>
+</svg>
