@@ -138,6 +138,31 @@
       color: var(--dark);
       transform: scale(1.1);
     }
+    @media (max-width: 768px) {
+      .gallery-filters {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        border-bottom: 1px solid var(--gray-border);
+        padding: 0.5rem var(--spacing-sm);
+        margin-bottom: var(--spacing-lg);
+        scrollbar-width: none; /* Hide scrollbar for Firefox */
+      }
+      .gallery-filters::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome/Safari */
+      }
+      .gallery-filter-btn {
+        flex: 0 0 auto; /* Prevent buttons from shrinking */
+        white-space: nowrap; /* Prevent text wrapping */
+      }
+    }
   </style>
 </head>
 <body>
