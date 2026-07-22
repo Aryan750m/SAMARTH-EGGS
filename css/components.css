@@ -532,12 +532,14 @@
   color: var(--nagpal-green);
   margin-bottom: var(--spacing-2xs);
   background: linear-gradient(135deg, var(--nagpal-green) 0%, #00b36b 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .bento-card--gold .bento-card__number {
   background: linear-gradient(135deg, var(--nagpal-yellow) 0%, #ffd66b 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -638,6 +640,7 @@
   }
   .flagship-glass-panel .bento-card__number {
     background: linear-gradient(135deg, var(--nagpal-green) 0%, #00b36b 100%) !important;
+    background-clip: text !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
   }
