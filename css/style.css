@@ -938,7 +938,7 @@ footer {
 }
 
 #back-to-top.show {
-  right: 30px;
+  right: 45px;
 }
 
 #back-to-top:hover {
@@ -960,4 +960,55 @@ footer {
 /* Hide mobile only drawer nav items on desktop */
 .mobile-only-action {
   display: none;
+}
+
+/* Floating WhatsApp Widget */
+.whatsapp-float {
+  position: fixed;
+  bottom: 110px; /* Offset to not overlap back-to-top button */
+  right: 45px; /* Increased from 30px to 45px to prevent clipping on boxed layouts */
+  width: 56px;
+  height: 56px;
+  background-color: #25d366;
+  color: #fff !important;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.whatsapp-float:hover {
+  background-color: #128c7e;
+  transform: scale(1.08) translateY(-2px);
+}
+
+.whatsapp-float::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid #25d366;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: wa-pulse 1.8s infinite;
+  opacity: 0;
+}
+
+@keyframes wa-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
 }
