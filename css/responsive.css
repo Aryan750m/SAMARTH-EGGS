@@ -180,7 +180,11 @@
 
   .form-group-row {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: var(--spacing-md);
+  }
+  .map-container {
+    height: 300px !important;
+    margin-top: var(--spacing-lg) !important;
   }
 }
 
