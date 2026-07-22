@@ -14,18 +14,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const filterValue = btn.getAttribute('data-filter');
 
         galleryItems.forEach(item => {
-          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+          const match = filterValue === 'all' || item.getAttribute('data-category') === filterValue;
+          if (match) {
             item.style.display = 'block';
-            setTimeout(() => {
+            requestAnimationFrame(() => {
               item.style.opacity = '1';
               item.style.transform = 'scale(1)';
-            }, 50);
+            });
           } else {
             item.style.opacity = '0';
-            item.style.transform = 'scale(0.8)';
-            setTimeout(() => {
-              item.style.display = 'none';
-            }, 300);
+            item.style.transform = 'scale(0.95)';
+            item.style.display = 'none';
           }
         });
       });

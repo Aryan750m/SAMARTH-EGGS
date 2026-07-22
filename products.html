@@ -245,11 +245,12 @@
       <div class="footer-col">
         <h3>Products</h3>
         <ul class="footer-links">
-          <li><a href="products.html">Organic Eggs</a></li>
-          <li><a href="products.html">Brown Country Eggs</a></li>
-          <li><a href="products.html">Regular Farm Eggs</a></li>
-          <li><a href="products.html">Duck Eggs</a></li>
-          <li><a href="products.html">Protein Fortified Eggs</a></li>
+          <li><a href="javascript:void(0)" onclick="filterProducts('white', document.querySelectorAll('.filter-btn')[1])">White Eggs (Nagpal)</a></li>
+          <li><a href="javascript:void(0)" onclick="filterProducts('organic', document.querySelectorAll('.filter-btn')[4])">Organic Eggs</a></li>
+          <li><a href="javascript:void(0)" onclick="filterProducts('brown', document.querySelectorAll('.filter-btn')[2])">Brown Country Eggs</a></li>
+          <li><a href="javascript:void(0)" onclick="filterProducts('country', document.querySelectorAll('.filter-btn')[3])">Country Eggs</a></li>
+          <li><a href="javascript:void(0)" onclick="filterProducts('duck', document.querySelectorAll('.filter-btn')[6])">Duck Eggs</a></li>
+          <li><a href="javascript:void(0)" onclick="filterProducts('jumbo', document.querySelectorAll('.filter-btn')[5])">Jumbo Farm Eggs</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -291,6 +292,7 @@
   <script src="js/main.js" defer></script>
   <script>
     function filterProducts(category, buttonEl) {
+      if (!buttonEl) return;
       document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
       buttonEl.classList.add('active');
 
@@ -307,6 +309,19 @@
         }
       });
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const filterParam = urlParams.get('filter');
+      if (filterParam) {
+        const targetBtn = Array.from(document.querySelectorAll('.filter-btn')).find(btn => 
+          btn.getAttribute('onclick') && btn.getAttribute('onclick').includes(`'${filterParam}'`)
+        );
+        if (targetBtn) {
+          filterProducts(filterParam, targetBtn);
+        }
+      }
+    });
   </script>
 </body>
 </html>
