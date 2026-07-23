@@ -353,6 +353,7 @@
     white-space: normal !important;
     text-align: center !important;
     font-size: 0.8rem !important;
+    color: var(--primary) !important;
   }
 
   .top-bar-right {
