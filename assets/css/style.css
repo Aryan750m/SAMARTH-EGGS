@@ -1024,10 +1024,10 @@ footer {
 /* Back to Top & Scroll Progress */
 #back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: -60px;
-  width: 45px;
-  height: 45px;
+  bottom: 25px;
+  right: -70px;
+  width: 50px;
+  height: 50px;
   background-color: var(--primary);
   color: var(--dark);
   border-radius: 50%;
@@ -1042,7 +1042,7 @@ footer {
 }
 
 #back-to-top.show {
-  right: 45px;
+  right: 25px;
 }
 
 #back-to-top:hover {
@@ -1060,7 +1060,6 @@ footer {
   width: 0%;
 }
 
-
 /* Hide mobile only drawer nav items on desktop */
 .mobile-only-action {
   display: none;
@@ -1069,17 +1068,15 @@ footer {
 /* Floating WhatsApp Widget */
 .whatsapp-float {
   position: fixed;
-  bottom: 110px;
-  /* Offset to not overlap back-to-top button */
-  right: 45px;
-  /* Increased from 30px to 45px to prevent clipping on boxed layouts */
-  width: 56px;
-  height: 56px;
+  bottom: 88px;
+  right: 25px;
+  width: 50px;
+  height: 50px;
   background-color: #25d366;
   color: #fff !important;
   border-radius: 50%;
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
   z-index: 9999;
   display: flex;
