@@ -478,19 +478,19 @@ button:focus-visible {
 
 /* Individual Page Specific Banners */
 .about-header-bg {
-  background-image: url('../assets/images/about/farm-overview.webp');
+  background-image: url('../images/about/farm-overview.webp');
 }
 
 .products-header-bg {
-  background-image: url('../assets/images/about/cold-storage.webp');
+  background-image: url('../images/about/cold-storage.webp');
 }
 
 .gallery-header-bg {
-  background-image: url('../assets/images/about/packaging-line.webp');
+  background-image: url('../images/about/packaging-line.webp');
 }
 
 .contact-header-bg {
-  background-image: url('../assets/images/about/workers-collect.webp');
+  background-image: url('../images/about/workers-collect.webp');
 }
 
 /* Hero Section Styles - Premium Redesign */
@@ -504,7 +504,7 @@ button:focus-visible {
   color: var(--white);
   overflow: hidden;
   text-align: left;
-  background: url('../assets/images/hero/hero-banner.webp') no-repeat center right / cover;
+  background: url('../images/hero/hero-banner.webp') no-repeat center right / cover;
 }
 
 .hero-overlay {
