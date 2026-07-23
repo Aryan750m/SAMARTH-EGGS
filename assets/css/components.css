@@ -24,6 +24,7 @@
   background-color: var(--primary);
   color: var(--dark);
 }
+
 .btn-primary:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow: var(--shadow-lg);
@@ -35,6 +36,7 @@
   color: var(--primary);
   border-color: var(--primary);
 }
+
 .btn-secondary:hover {
   background-color: var(--primary);
   color: var(--dark);
@@ -46,6 +48,7 @@
   color: var(--dark);
   border-color: var(--dark);
 }
+
 .btn-outline:hover {
   background-color: var(--dark);
   color: var(--white);
@@ -64,20 +67,24 @@
   box-shadow: var(--shadow-md);
   transition: var(--transition-slow);
 }
+
 .category-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-premium);
 }
+
 .category-card img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: var(--transition-slow);
 }
+
 .category-card:hover img {
   transform: scale(1.08);
   filter: brightness(0.85);
 }
+
 .category-overlay {
   position: absolute;
   top: 0;
@@ -92,23 +99,27 @@
   color: var(--white);
   transition: var(--transition-normal);
 }
+
 .category-card:hover .category-overlay {
   background: linear-gradient(to top, rgba(1, 133, 73, 0.98) 0%, rgba(1, 133, 73, 0.5) 75%, rgba(1, 133, 73, 0.25) 100%);
 }
+
 .category-overlay h3 {
   color: var(--nagpal-yellow);
   font-family: var(--font-headings);
   font-size: 1.8rem;
   margin-bottom: 5px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   text-transform: uppercase;
 }
+
 .category-overlay p {
   color: var(--white);
   font-size: 0.9rem;
   opacity: 0.9;
   margin-bottom: var(--spacing-sm);
 }
+
 .category-overlay .btn-link {
   align-self: flex-start;
   background: var(--nagpal-yellow);
@@ -122,6 +133,7 @@
   gap: 6px;
   transition: var(--transition-fast);
 }
+
 .category-overlay .btn-link:hover {
   background: var(--white);
   color: var(--nagpal-green);
@@ -147,6 +159,7 @@
   transition: var(--transition-fast);
   cursor: pointer;
 }
+
 .whatsapp-card-float:hover {
   background-color: var(--whatsapp-green-hover);
   transform: scale(1.15) rotate(10deg);
@@ -165,30 +178,28 @@
   display: flex;
   flex-direction: column;
 }
+
 .product-card:hover {
   background: rgba(255, 255, 255, 0.85);
   transform: translateY(-8px);
   box-shadow: 0 16px 48px 0 rgba(0, 0, 0, 0.08);
   border-color: rgba(255, 255, 255, 0.7);
 }
+
 .product-image {
   position: relative;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
-  background-color: #f8f9fa;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
+  background-color: var(--gray-light);
 }
+
 .product-image img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: var(--transition-slow);
 }
+
 .product-card:hover .product-image img {
   transform: scale(1.06);
 }
@@ -212,6 +223,7 @@
   margin-top: 12px;
   box-shadow: 0 2px 4px rgba(37, 211, 102, 0.15);
 }
+
 .whatsapp-btn:hover {
   background-color: var(--whatsapp-green-hover);
   color: var(--white) !important;
@@ -237,22 +249,28 @@
   padding: var(--spacing-md);
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Fills vertical space in card */
+  flex-grow: 1;
+  /* Fills vertical space in card */
 }
+
 .product-details-content p {
-  flex-grow: 1; /* Pushes meta and buttons to the bottom */
+  flex-grow: 1;
+  /* Pushes meta and buttons to the bottom */
   margin-bottom: var(--spacing-md);
 }
+
 .product-title {
   font-size: 1.35rem;
   margin-bottom: var(--spacing-xs);
 }
+
 .product-meta {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--gray-border);
   padding-top: var(--spacing-sm);
-  margin-top: auto; /* Ensures it starts at the bottom boundary */
+  margin-top: auto;
+  /* Ensures it starts at the bottom boundary */
 }
 
 /* Quality Timeline - Premium BEM specifications */
@@ -263,16 +281,20 @@
   align-items: flex-start;
   margin-top: var(--spacing-xl);
 }
+
 .timeline::before {
   content: '';
   position: absolute;
-  top: 44px; /* Centered with 88px circle */
+  top: 44px;
+  /* Centered with 88px circle */
   left: 0;
   width: 100%;
   height: 4px;
-  background-color: var(--gray-border); /* Softer divider line color */
+  background-color: var(--gray-border);
+  /* Softer divider line color */
   z-index: 1;
 }
+
 .timeline-step {
   position: relative;
   z-index: 2;
@@ -281,6 +303,7 @@
   padding: 0 var(--spacing-sm);
   transition: all var(--transition-normal);
 }
+
 .timeline-icon {
   width: 88px;
   height: 88px;
@@ -295,6 +318,7 @@
   color: var(--nagpal-green);
   transition: all var(--transition-normal);
 }
+
 .timeline-step:hover .timeline-icon {
   border-color: var(--nagpal-green);
   background-color: var(--nagpal-green);
@@ -326,6 +350,7 @@
   border-bottom: 1px solid var(--gray-border);
   padding: var(--spacing-sm) 0;
 }
+
 .faq-question {
   display: flex;
   justify-content: space-between;
@@ -341,18 +366,22 @@
   cursor: pointer;
   color: var(--dark);
 }
+
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
 }
+
 .faq-answer p {
   padding-bottom: var(--spacing-sm);
 }
+
 .faq-icon {
   font-size: 1.1rem;
   transition: transform var(--transition-normal);
 }
+
 .faq-item.active .faq-icon {
   transform: rotate(45deg);
   color: var(--primary);
@@ -362,6 +391,7 @@
 .form-group {
   margin-bottom: var(--spacing-md);
 }
+
 .form-group label {
   display: block;
   margin-bottom: 6px;
@@ -371,6 +401,7 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
 .form-control {
   width: 100%;
   padding: 0.8rem 1rem;
@@ -380,11 +411,13 @@
   transition: var(--transition-normal);
   font-size: 0.9rem;
 }
+
 .form-control:focus {
   border-color: var(--primary);
   background-color: var(--white);
   box-shadow: 0 0 0 3px rgba(255, 212, 0, 0.15);
 }
+
 .form-group-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -399,20 +432,24 @@
   max-width: 800px;
   margin: 0 auto;
 }
+
 .custom-slides-wrapper {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
+
 .custom-slide {
   min-width: 100%;
   box-sizing: border-box;
 }
+
 .slider-dots {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
 }
+
 .slider-dot {
   width: 10px;
   height: 10px;
@@ -421,6 +458,7 @@
   cursor: pointer;
   transition: var(--transition-fast);
 }
+
 .slider-dot.active {
   background-color: var(--primary);
   transform: scale(1.2);
@@ -429,7 +467,8 @@
 /* Feature Benefits Cards - Why Choose Us */
 .feature-card {
   text-align: left;
-  padding: 28px 24px; /* Increased vertical padding */
+  padding: 28px 24px;
+  /* Increased vertical padding */
   background: var(--white);
   border: 1px solid var(--gray-border);
   border-radius: var(--radius-lg);
@@ -571,6 +610,7 @@
   .bento-grid {
     grid-template-columns: 1fr 1fr;
   }
+
   .bento-row-2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -580,6 +620,7 @@
   .bento-grid {
     grid-template-columns: 1fr;
   }
+
   .bento-row-2 {
     grid-template-columns: 1fr;
     grid-column: span 1;
@@ -590,14 +631,17 @@
 .editorial-card-hover {
   transition: all var(--transition-normal);
 }
+
 .editorial-card-hover:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-premium) !important;
   border-color: var(--nagpal-green) !important;
 }
+
 .zoom-image-hover {
   transition: transform var(--transition-slow);
 }
+
 .zoom-image-hover:hover {
   transform: scale(1.05);
 }
@@ -629,9 +673,11 @@
     flex-direction: column;
     border-radius: 24px !important;
   }
+
   .flagship-hero-image img {
     height: 260px !important;
   }
+
   .flagship-glass-panel {
     position: relative !important;
     bottom: auto !important;
@@ -644,6 +690,7 @@
     max-width: 100% !important;
     padding: 24px !important;
   }
+
   .flagship-glass-panel .bento-card__number {
     background: linear-gradient(135deg, var(--nagpal-green) 0%, #00b36b 100%) !important;
     background-clip: text !important;
@@ -686,7 +733,8 @@
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1;
-  color: #02c76f; /* Bright premium green for dark backgrounds */
+  color: #02c76f;
+  /* Bright premium green for dark backgrounds */
   margin: 0;
   font-variant-numeric: tabular-nums;
   display: inline-block;
@@ -699,7 +747,8 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--nagpal-yellow); /* Accent Gold */
+  color: var(--nagpal-yellow);
+  /* Accent Gold */
   margin: 0;
 }
 
@@ -709,9 +758,3 @@
   line-height: 1.5;
   margin: 0;
 }
-
-
-
-
-
-
