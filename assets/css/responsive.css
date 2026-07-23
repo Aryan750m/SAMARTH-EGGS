@@ -1,9 +1,9 @@
-/* responsive.css - Media Queries */
+/* responsive.css - Comprehensive Mobile Alignment & Layout Polish */
 @import url('variables.css');
 
 @media (max-width: 1200px) {
   .hero-content {
-    max-width: 540px;
+    max-width: 580px;
   }
 }
 
@@ -14,27 +14,27 @@
   .product-grid { grid-template-columns: repeat(2, 1fr); }
   
   /* Hero */
-  .hero-content { padding-left: 1.5rem; width: 100%; }
-  .hero-content h1 { font-size: 3.2rem; }
-  .hero-content p { font-size: 1.1rem; }
+  .hero-content { padding-left: 1.5rem; padding-right: 1.5rem; width: 100%; }
+  .hero-content h1 { font-size: 2.8rem; line-height: 1.15; }
+  .hero-content p { font-size: 1.05rem; }
 
-  /* Upgraded 2026 Mobile Responsive Menu */
+  /* Mobile Responsive Menu Drawer */
   .nav-links {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 300px;
+    width: 280px;
     height: 100vh;
-    background: rgba(17, 17, 17, 0.85);
+    background: rgba(17, 17, 17, 0.95);
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     flex-direction: column;
     justify-content: center;
     padding: var(--spacing-xxl) var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
-    gap: 1.2rem;
-    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    gap: 1rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.4);
     z-index: 999;
   }
   
@@ -44,10 +44,10 @@
   
   .nav-links a {
     color: var(--white) !important;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     width: 100%;
     text-align: center;
-    padding: 0.8rem 1.5rem;
+    padding: 0.75rem 1.25rem;
     border-radius: var(--radius-full);
   }
 
@@ -85,9 +85,9 @@
   }
 
   .logo-text {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
-  /* Mobile section padding */
+
   section.section {
     padding: 3rem 0 !important;
   }
@@ -96,58 +96,126 @@
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
-  
-  /* Mobile Process Steps Timeline */
-  .timeline {
+}
+
+@media (max-width: 768px) {
+  /* Global Container Mobile Spacing Alignment */
+  .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Grid Stack on Mobile */
+  .grid-2, .grid-3, .grid-4, .product-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Hero Section Mobile Alignment */
+  .hero {
+    height: auto;
+    min-height: 520px;
+    padding: 6rem 0 4rem 0;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+    max-width: 100%;
+  }
+
+  .hero-btns {
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
-    align-items: stretch;
-    margin-top: 1.5rem;
-  }
-  
-  .timeline::before {
-    display: none;
-  }
-  
-  .timeline-step {
     width: 100%;
-    padding: 0.9rem 1.1rem;
-    display: flex;
+    max-width: 320px;
     align-items: center;
-    text-align: left;
-    gap: 1rem;
-    background: var(--white);
-    border: 1px solid var(--gray-border);
-    border-radius: var(--radius-md);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
   }
 
-  .timeline-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    font-size: 1.25rem;
-    margin: 0;
-    border-width: 2px;
-    background: rgba(15, 118, 110, 0.08);
-  }
-
-  .timeline-step h3 {
-    font-size: 1.05rem;
-    margin-bottom: 0.15rem;
-  }
-
-  .timeline-step p {
+  .hero-btns .btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.85rem 1.5rem;
     font-size: 0.85rem;
-    color: var(--text-muted);
+    text-align: center;
+    justify-content: center;
   }
 
+  /* Page Header Banners on Mobile */
+  .page-header {
+    padding: 5rem 0 2.5rem 0 !important;
+    text-align: center;
+  }
+
+  .page-title {
+    font-size: 2.2rem !important;
+  }
+
+  .page-desc {
+    font-size: 0.95rem !important;
+  }
+
+  /* Mobile Filter Slider Alignment */
+  .filter-bar,
+  .gallery-filters {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border-radius: 16px !important;
+    background: #ffffff !important;
+    padding: 6px 10px !important;
+    margin-bottom: 1.5rem !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06) !important;
+    border: 1px solid var(--gray-border) !important;
+    scrollbar-width: none !important;
+    margin-inline: 0 !important;
+  }
+
+  .filter-bar::-webkit-scrollbar,
+  .gallery-filters::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  .filter-btn,
+  .gallery-filter-btn {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    scroll-snap-align: start !important;
+    padding: 0.55rem 1.1rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  /* Floating Widgets Alignment on Mobile */
   #back-to-top {
-    bottom: 18px;
+    bottom: 20px;
+    right: 18px;
     width: 44px;
     height: 44px;
     font-size: 0.95rem;
+    z-index: 999;
   }
 
   #back-to-top.show {
@@ -155,122 +223,74 @@
   }
 
   .whatsapp-float {
-    bottom: 72px;
+    bottom: 74px;
     right: 18px;
     width: 44px;
     height: 44px;
     font-size: 22px;
+    z-index: 1000;
   }
 
-  /* Contact layout */
+  /* Form & Contact Layout on Mobile */
+  .form-group-row,
   .contact-section-layout {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-md) !important;
   }
 
-  /* Footer */
+  .map-container {
+    height: 280px !important;
+    margin-top: var(--spacing-lg) !important;
+  }
+
+  /* Footer on Mobile */
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-lg) var(--spacing-md);
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-lg) !important;
+    text-align: center;
   }
-  .footer-col:first-child,
-  .footer-col:last-child {
-    grid-column: span 2;
-  }
-}
 
-@media (max-width: 768px) {
-  .grid-2 { grid-template-columns: 1fr; }
-  .grid-3 { grid-template-columns: 1fr; }
-  .grid-4 { grid-template-columns: 1fr; }
-  .product-grid { grid-template-columns: 1fr; }
-  
-  .hero-btns {
+  .footer-col {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .hero-btns .btn {
-    width: 80%;
-    max-width: 300px;
+
+  .footer-col:first-child,
+  .footer-col:last-child {
+    grid-column: span 1 !important;
   }
 
-  .form-group-row {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+  .footer-links {
+    align-items: center;
   }
-  .map-container {
-    height: 300px !important;
-    margin-top: var(--spacing-lg) !important;
+
+  .footer-socials {
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-md) var(--spacing-sm);
+  .hero-content h1 {
+    font-size: 1.95rem;
   }
-  .footer-col:first-child,
-  .footer-col:last-child {
-    grid-column: span 2;
+
+  .page-title {
+    font-size: 1.85rem !important;
   }
-  
+
   .about-badge {
-    padding: 10px 16px;
-    bottom: 15px;
-    left: 15px;
+    padding: 8px 14px;
+    bottom: 12px;
+    left: 12px;
     right: auto;
-  }
-  
-  .about-badge span.badge-num,
-  .about-badge span:first-child {
-    font-size: 1.5rem;
   }
 }
 
-/* Ensure mobile nav link colors stay visible on subpages inside drawer */
+/* Subpage Drawer Header Colors */
 @media (max-width: 992px) {
   header.scrolled .nav-links a,
   .nav-links a {
     color: var(--white) !important;
-  }
-}
-
-/* Responsive grid overrides for subpages */
-@media (max-width: 768px) {
-  .mission-vision-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--spacing-md) !important;
-  }
-  .infra-grid {
-    grid-template-columns: 1fr !important;
-    gap: var(--spacing-lg) !important;
-  }
-  .certs-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: var(--spacing-sm) !important;
-  }
-  .details-layout {
-    grid-template-columns: 1fr !important;
-    margin-top: 5rem !important;
-    gap: var(--spacing-lg) !important;
-  }
-  .top-bar-content {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 6px !important;
-  }
-  .top-bar-info {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 4px !important;
-  }
-  .top-bar-info span {
-    margin-right: 0 !important;
-  }
-}
-@media (max-width: 480px) {
-  .certs-grid {
-    grid-template-columns: 1fr !important;
   }
 }
