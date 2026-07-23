@@ -340,32 +340,33 @@
     gap: 6px !important;
   }
 
-  .top-bar-info {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 4px !important;
+  .top-bar-left,
+  .top-bar-center,
+  .top-bar-right {
     text-align: center !important;
+    width: 100% !important;
   }
 
-  .top-bar-info span {
+  .top-bar-left span,
+  .top-bar-center span {
     margin-right: 0 !important;
     white-space: normal !important;
     text-align: center !important;
     font-size: 0.8rem !important;
   }
 
-  .top-bar-contact {
+  .top-bar-right {
     margin-top: 2px !important;
   }
 
-  .top-bar-contact a {
+  .top-bar-right a {
     white-space: nowrap !important;
     font-size: 0.88rem !important;
     font-weight: 700 !important;
     display: inline-flex !important;
     align-items: center !important;
     gap: 6px !important;
+    color: var(--primary) !important;
   }
 
   .footer-links {
