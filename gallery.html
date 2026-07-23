@@ -220,29 +220,32 @@
         flex-wrap: nowrap;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
         justify-content: flex-start;
         width: 100%;
         max-width: 100%;
-        border-radius: 0;
-        border: none;
-        box-shadow: none;
-        border-bottom: 1px solid var(--gray-border);
-        padding: 0.5rem var(--spacing-sm);
-        margin-bottom: var(--spacing-lg);
+        border-radius: 16px;
+        border: 1px solid var(--gray-border);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        background: #ffffff;
+        padding: 0.5rem 0.75rem;
+        margin-bottom: 1.5rem;
         scrollbar-width: none;
-        /* Hide scrollbar for Firefox */
+        gap: 0.5rem;
       }
 
       .gallery-filters::-webkit-scrollbar {
         display: none;
-        /* Hide scrollbar for Chrome/Safari */
       }
 
       .gallery-filter-btn {
-        flex: 0 0 auto;
-        /* Prevent buttons from shrinking */
+        flex-shrink: 0;
         white-space: nowrap;
-        /* Prevent text wrapping */
+        scroll-snap-align: start;
+        padding: 0.55rem 1.1rem;
+        font-size: 0.88rem;
+      }
       }
     }
   </style>

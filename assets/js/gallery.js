@@ -11,6 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
+        // Smoothly scroll active tab into view in horizontal slider on mobile
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
         const filterValue = btn.getAttribute('data-filter');
 
         galleryItems.forEach(item => {
