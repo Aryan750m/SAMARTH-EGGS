@@ -1,24 +1,32 @@
 /* main.js - Core Page Coordinator */
-document.addEventListener('DOMContentLoaded', () => {
-  // 1. Dismiss Preloader
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    const hidePreloader = () => {
+
+// Bulletproof Preloader Dismissal
+(function() {
+  function dismissPreloader() {
+    const preloader = document.getElementById('preloader');
+    if (preloader && preloader.style.display !== 'none') {
       preloader.style.opacity = '0';
       preloader.style.visibility = 'hidden';
       preloader.style.pointerEvents = 'none';
-      setTimeout(() => { preloader.style.display = 'none'; }, 500);
-    };
-
-    if (document.readyState === 'complete') {
-      hidePreloader();
-    } else {
-      window.addEventListener('load', hidePreloader);
-      setTimeout(hidePreloader, 1000);
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 400);
     }
   }
 
-  // 2. Scroll Reveal Intersection Observer
+  if (document.readyState === 'complete' || document.readyState === 'interactive') {
+    setTimeout(dismissPreloader, 100);
+  } else {
+    document.addEventListener('DOMContentLoaded', dismissPreloader);
+    window.addEventListener('load', dismissPreloader);
+  }
+
+  // Guaranteed Safety Backup Timer (500ms max)
+  setTimeout(dismissPreloader, 500);
+})();
+
+// Scroll Reveal & Intersection Observer
+document.addEventListener('DOMContentLoaded', () => {
   const revealElements = document.querySelectorAll('.reveal-item');
   if (revealElements.length > 0) {
     const revealObserver = new IntersectionObserver((entries) => {
@@ -35,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Safety Fallback: Reveal all elements after delay to prevent unrevealed elements on mobile or slow devices
+    // Safety Fallback: Reveal all elements after delay
     setTimeout(() => {
       revealElements.forEach(el => el.classList.add('revealed'));
-    }, 800);
+    }, 600);
   }
 });
