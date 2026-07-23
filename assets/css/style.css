@@ -133,11 +133,11 @@ select {
 .top-bar {
   background-color: var(--dark-light);
   color: var(--white);
-  font-size: 0.78rem;
-  padding: 8px 0;
+  font-size: 0.85rem;
+  padding: 10px 0;
   font-weight: 500;
-  letter-spacing: 0.5px;
-  border-bottom: 1px solid #222;
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .top-bar-content {
@@ -146,13 +146,29 @@ select {
   align-items: center;
 }
 
+.top-bar-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .top-bar-info span {
-  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .top-bar-info i {
   color: var(--primary);
-  margin-right: 5px;
+}
+
+.top-bar-contact a {
+  white-space: nowrap !important;
+  font-weight: 700;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 /* Navigation Header - Upgraded 2026 Premium Design */
