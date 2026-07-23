@@ -941,7 +941,8 @@ footer {
   content: '';
   position: absolute;
   bottom: -5px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 45px;
   height: 2px;
   background-color: var(--primary);

@@ -231,6 +231,56 @@
     z-index: 1000;
   }
 
+  /* Quality Timeline Vertical Card List on Mobile */
+  .timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.1rem !important;
+    align-items: stretch !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .timeline::before {
+    display: none !important;
+  }
+
+  .timeline-step {
+    width: 100% !important;
+    padding: 1.1rem 1.25rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    text-align: left !important;
+    gap: 1.25rem !important;
+    background: #ffffff !important;
+    border: 1px solid var(--gray-border) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .timeline-icon {
+    width: 56px !important;
+    height: 56px !important;
+    min-width: 56px !important;
+    font-size: 1.25rem !important;
+    margin: 0 !important;
+    border-width: 3px !important;
+    background: rgba(15, 118, 110, 0.08) !important;
+  }
+
+  .timeline-step h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.2rem !important;
+    text-align: left !important;
+  }
+
+  .timeline-step p {
+    font-size: 0.88rem !important;
+    margin: 0 !important;
+    text-align: left !important;
+    line-height: 1.4 !important;
+  }
+
   /* Form & Contact Layout on Mobile */
   .form-group-row,
   .contact-section-layout {
@@ -254,6 +304,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .footer-col h3::after {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
   }
 
   .footer-col:first-child,
