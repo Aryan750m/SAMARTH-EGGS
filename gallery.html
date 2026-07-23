@@ -1,22 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media Gallery | Samarth Eggs Center</title>
-  <meta name="description" content="Explore photo galleries of Samarth Eggs biosecure poultry farms, cold storage warehouses, packaging lines, and logistics fleet.">
-  
+  <title>Media Gallery | Samarth Eggs Center - Facility &amp; Operations Tour Mumbai</title>
+  <meta name="description" content="Explore photo galleries of Samarth Eggs biosecure poultry layer sheds, automated sorting lines, cold storage, and logistics fleet in Mumbai.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Anti Gravity">
+  <meta name="theme-color" content="#f4b400">
+
+  <!-- Resource Hints & Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Canonical & Social Metas -->
   <link rel="canonical" href="https://samartheggscenter.com/gallery.html">
-  <meta property="og:title" content="Media Gallery | Samarth Eggs Center">
-  <meta property="og:description" content="Explore photo galleries of Samarth Eggs biosecure poultry farms, cold storage warehouses, packaging lines, and logistics fleet.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Samarth Eggs Center">
+  <meta property="og:title" content="Media Gallery | Samarth Eggs Center - Facility &amp; Operations Tour Mumbai">
+  <meta property="og:description" content="Explore photo galleries of Samarth Eggs biosecure poultry layer sheds, automated sorting lines, cold storage, and logistics fleet in Mumbai.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://samartheggscenter.com/gallery.html">
-  <meta property="og:image" content="https://samartheggscenter.com/logo.jpeg">
-  
-  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <meta property="og:image" content="https://samartheggscenter.com/assets/images/logo/logo.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Media Gallery | Samarth Eggs Center">
+  <meta name="twitter:description" content="Explore photo galleries of Samarth Eggs biosecure poultry layer sheds, automated sorting lines, cold storage, and logistics fleet in Mumbai.">
+  <meta name="twitter:image" content="https://samartheggscenter.com/assets/images/logo/logo.webp">
+
+  <!-- Favicon Set & Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/logo/logo.webp">
+  <link rel="apple-touch-icon" href="assets/images/logo/logo.webp">
+
+  <!-- Icons CDN & CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- ImageGallery & BreadcrumbList JSON-LD Schema -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "Samarth Eggs Media Gallery",
+      "description": "Virtual tour of biosecure poultry layer sheds, automated sorting lines, cold storage, and logistics fleet.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Samarth Eggs Center",
+        "logo": "https://samartheggscenter.com/assets/images/logo/logo.webp"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://samartheggscenter.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Media Gallery",
+          "item": "https://samartheggscenter.com/gallery.html"
+        }
+      ]
+    }
+  ]
+  </script>
   <style>
     .gallery-filters {
       display: flex;
@@ -27,11 +83,12 @@
       background: var(--white);
       padding: 0.5rem;
       border-radius: var(--radius-full);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       border: 1px solid var(--gray-border);
       width: fit-content;
       margin-inline: auto;
     }
+
     .gallery-filter-btn {
       padding: 0.6rem 1.4rem;
       border: none;
@@ -43,16 +100,20 @@
       color: var(--text-muted);
       transition: var(--transition-fast);
     }
-    .gallery-filter-btn.active, .gallery-filter-btn:hover {
+
+    .gallery-filter-btn.active,
+    .gallery-filter-btn:hover {
       background-color: var(--nagpal-green);
       color: var(--white);
       box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
     }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
       gap: 1.5rem;
     }
+
     .gallery-card {
       position: relative;
       border-radius: var(--radius-lg);
@@ -62,30 +123,34 @@
       cursor: pointer;
       background: var(--dark);
       border: 1px solid var(--gray-border);
-      content-visibility: auto;
-      contain-intrinsic-size: 250px;
+      opacity: 1;
       will-change: transform, opacity;
     }
+
     .gallery-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-premium);
       border-color: var(--nagpal-green);
     }
+
     .gallery-card__img-container {
       position: relative;
       width: 100%;
       height: 250px;
       overflow: hidden;
     }
+
     .gallery-card__img-container img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .gallery-card:hover .gallery-card__img-container img {
       transform: scale(1.08);
     }
+
     .gallery-card__badge {
       position: absolute;
       top: 14px;
@@ -103,18 +168,20 @@
       border: 1px solid rgba(242, 170, 52, 0.3);
       z-index: 2;
     }
+
     .gallery-card__overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       padding: 1.5rem 1.2rem 1.2rem 1.2rem;
-      background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.5) 65%, transparent 100%);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.5) 65%, transparent 100%);
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       z-index: 2;
     }
+
     .gallery-card__title {
       color: var(--white);
       font-family: var(--font-headings);
@@ -123,6 +190,7 @@
       margin: 0;
       letter-spacing: -0.01em;
     }
+
     .gallery-card__icon {
       width: 36px;
       height: 36px;
@@ -136,11 +204,13 @@
       flex-shrink: 0;
       transition: var(--transition-fast);
     }
+
     .gallery-card:hover .gallery-card__icon {
       background: var(--nagpal-yellow);
       color: var(--dark);
       transform: scale(1.1);
     }
+
     @media (max-width: 768px) {
       .gallery-filters {
         display: flex;
@@ -156,18 +226,25 @@
         border-bottom: 1px solid var(--gray-border);
         padding: 0.5rem var(--spacing-sm);
         margin-bottom: var(--spacing-lg);
-        scrollbar-width: none; /* Hide scrollbar for Firefox */
+        scrollbar-width: none;
+        /* Hide scrollbar for Firefox */
       }
+
       .gallery-filters::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for Chrome/Safari */
+        display: none;
+        /* Hide scrollbar for Chrome/Safari */
       }
+
       .gallery-filter-btn {
-        flex: 0 0 auto; /* Prevent buttons from shrinking */
-        white-space: nowrap; /* Prevent text wrapping */
+        flex: 0 0 auto;
+        /* Prevent buttons from shrinking */
+        white-space: nowrap;
+        /* Prevent text wrapping */
       }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Preloader -->
@@ -182,10 +259,11 @@
   <header class="scrolled">
     <div class="container navbar">
       <a href="index.html" class="logo" style="display: flex; align-items: center; gap: var(--spacing-sm);">
-        <img src="assets/images/logo/logo.jpeg" alt="Samarth Eggs Mascot Logo" style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
+        <img src="assets/images/logo/logo.webp" alt="Samarth Eggs Mascot Logo"
+          style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
         <span class="logo-text">SAMARTH EGGS</span>
       </a>
-      
+
       <button class="mobile-menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
@@ -199,13 +277,21 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+918080515150" class="btn btn-primary" style="display: block; text-align: center; color: var(--dark) !important; padding: 0.8rem;"><i class="fas fa-phone"></i> Call Us</a></li>
-        <li class="mobile-only-action" style="margin-top: var(--spacing-xs);"><a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="display: block; text-align: center; color: var(--white) !important; padding: 0.8rem;"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a></li>
+        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+918080515150"
+            class="btn btn-primary"
+            style="display: block; text-align: center; color: var(--dark) !important; padding: 0.8rem;"><i
+              class="fas fa-phone"></i> Call Us</a></li>
+        <li class="mobile-only-action" style="margin-top: var(--spacing-xs);"><a href="#"
+            class="btn btn-secondary whatsapp-chat-trigger"
+            style="display: block; text-align: center; color: var(--white) !important; padding: 0.8rem;"><i
+              class="fab fa-whatsapp"></i> Chat WhatsApp</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="tel:+918080515150" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fas fa-phone"></i> Call</a>
-        <a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
+        <a href="tel:+918080515150" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i
+            class="fas fa-phone"></i> Call</a>
+        <a href="#" class="btn btn-secondary whatsapp-chat-trigger"
+          style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
       </div>
     </div>
   </header>
@@ -213,9 +299,12 @@
   <!-- Gallery Header -->
   <div class="page-header gallery-header-bg">
     <div class="container">
-      <span class="hero-eyebrow" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: var(--nagpal-yellow); margin-bottom: 0.5rem;">Facility &amp; Operations Tour</span>
+      <span class="hero-eyebrow"
+        style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: var(--nagpal-yellow); margin-bottom: 0.5rem;">Facility
+        &amp; Operations Tour</span>
       <h1>Media Gallery</h1>
-      <p style="color: rgba(255, 255, 255, 0.85); max-width: 600px; margin-inline: auto;">Take a virtual tour of our biosecure poultry layer sheds, automated sorting lines, and logistics fleet.</p>
+      <p style="color: rgba(255, 255, 255, 0.85); max-width: 600px; margin-inline: auto;">Take a virtual tour of our
+        biosecure poultry layer sheds, automated sorting lines, and logistics fleet.</p>
     </div>
   </div>
 
@@ -233,19 +322,20 @@
       </div>
 
       <!-- Gallery Grid -->
-      <div class="gallery-grid reveal-item">
+      <div class="gallery-grid">
         <!-- Item 1 -->
         <div class="gallery-card lightbox-trigger" data-category="farms">
           <span class="gallery-card__badge">Poultry Farm</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/gallery-nesting-shed.png" alt="Biosecure Layer Nesting Shed" loading="lazy">
+            <img src="assets/images/gallery/gallery-nesting-shed.webp" alt="Biosecure Layer Nesting Shed"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Biosecure Layer Nesting Shed</h3>
             <div class="gallery-card__icon"><i class="fas fa-search-plus"></i></div>
           </div>
         </div>
-        
+
         <!-- Item 2 -->
         <div class="gallery-card lightbox-trigger" data-category="warehouse">
           <span class="gallery-card__badge">Cold Storage</span>
@@ -262,7 +352,8 @@
         <div class="gallery-card lightbox-trigger" data-category="packaging">
           <span class="gallery-card__badge">Packaging</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/sorting-line.webp" alt="Automated Candling &amp; Sorting Line" loading="lazy">
+            <img src="assets/images/gallery/sorting-line.webp" alt="Automated Candling &amp; Sorting Line"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Automated Candling &amp; Sorting</h3>
@@ -274,7 +365,8 @@
         <div class="gallery-card lightbox-trigger" data-category="delivery">
           <span class="gallery-card__badge">Logistics</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/delivery-fleet.webp" alt="Temperature-Controlled Delivery Fleet" loading="lazy">
+            <img src="assets/images/gallery/delivery-fleet.webp" alt="Temperature-Controlled Delivery Fleet"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Temperature-Controlled Fleet</h3>
@@ -286,7 +378,7 @@
         <div class="gallery-card lightbox-trigger" data-category="farms">
           <span class="gallery-card__badge">Poultry Farm</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/gallery-feeding-yard.png" alt="Organic Layer Feeding Yard" loading="lazy">
+            <img src="assets/images/gallery/gallery-feeding-yard.webp" alt="Organic Layer Feeding Yard" loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Organic Layer Feeding Yard</h3>
@@ -310,7 +402,8 @@
         <div class="gallery-card lightbox-trigger" data-category="farms">
           <span class="gallery-card__badge">Poultry Farm</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/gallery-farm-building.png" alt="Biosecure Farm Infrastructure" loading="lazy">
+            <img src="assets/images/gallery/gallery-farm-building.webp" alt="Biosecure Farm Infrastructure"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Biosecure Farm Facility</h3>
@@ -322,7 +415,8 @@
         <div class="gallery-card lightbox-trigger" data-category="farms">
           <span class="gallery-card__badge">Poultry Farm</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/gallery-egg-harvesting.png" alt="Sunrise Nest Egg Harvesting" loading="lazy">
+            <img src="assets/images/gallery/gallery-egg-harvesting.webp" alt="Sunrise Nest Egg Harvesting"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Sunrise Nest Egg Harvesting</h3>
@@ -346,7 +440,8 @@
         <div class="gallery-card lightbox-trigger" data-category="packaging">
           <span class="gallery-card__badge">Packaging</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/gallery-quality-check.png" alt="Hygienic Manual Quality Selection" loading="lazy">
+            <img src="assets/images/gallery/gallery-quality-check.webp" alt="Hygienic Manual Quality Selection"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Manual Quality Verification</h3>
@@ -370,7 +465,8 @@
         <div class="gallery-card lightbox-trigger" data-category="warehouse">
           <span class="gallery-card__badge">Cold Storage</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/gallery-staging-vault.png" alt="Chilled Logistics Staging Vault" loading="lazy">
+            <img src="assets/images/gallery/gallery-staging-vault.webp" alt="Chilled Logistics Staging Vault"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Chilled Staging Vault</h3>
@@ -382,7 +478,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-protein-flyer.jpeg" alt="Nagpal Nutrimore Protein Infographic" loading="lazy">
+            <img src="assets/images/gallery/nagpal-protein-flyer.webp" alt="Nagpal Nutrimore Protein Infographic"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Nutrimore Protein Benefits</h3>
@@ -394,7 +491,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-authenticity-card.jpeg" alt="Shree Krishnan Brand Authenticity Card" loading="lazy">
+            <img src="assets/images/gallery/nagpal-authenticity-card.webp" alt="Shree Krishnan Brand Authenticity Card"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Brand Authenticity Card</h3>
@@ -406,7 +504,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-boiled-egg.jpeg" alt="Nagpal Eggs Quality Yellow Yolk" loading="lazy">
+            <img src="assets/images/gallery/nagpal-boiled-egg.webp" alt="Nagpal Eggs Quality Yellow Yolk"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Rich Orange Yolk Profile</h3>
@@ -418,7 +517,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-retail-cartons.jpeg" alt="Nagpal Premium Retail 6-Pack Cartons" loading="lazy">
+            <img src="assets/images/gallery/nagpal-retail-cartons.webp" alt="Nagpal Premium Retail 6-Pack Cartons"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">6-Pack Retail Cartons</h3>
@@ -430,7 +530,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-white-tray.jpeg" alt="Branded Nagpal White Eggs in Trays" loading="lazy">
+            <img src="assets/images/gallery/nagpal-white-tray.webp" alt="Branded Nagpal White Eggs in Trays"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Branded White Eggs Trays</h3>
@@ -442,7 +543,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-white-pyramid.jpeg" alt="Nagpal White Eggs Stock Display" loading="lazy">
+            <img src="assets/images/gallery/nagpal-white-pyramid.webp" alt="Nagpal White Eggs Stock Display"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Eggs Stock Display</h3>
@@ -454,7 +556,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-brown-tray.jpeg" alt="Branded Nagpal Brown Eggs in Trays" loading="lazy">
+            <img src="assets/images/gallery/nagpal-brown-tray.webp" alt="Branded Nagpal Brown Eggs in Trays"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Branded Brown Eggs Trays</h3>
@@ -466,7 +569,8 @@
         <div class="gallery-card lightbox-trigger" data-category="nagpal">
           <span class="gallery-card__badge">Nagpal Eggs</span>
           <div class="gallery-card__img-container">
-            <img src="assets/images/gallery/nagpal-fried-yolk.jpeg" alt="Orange Yolk Culinary Performance" loading="lazy">
+            <img src="assets/images/gallery/nagpal-fried-yolk.webp" alt="Orange Yolk Culinary Performance"
+              loading="lazy">
           </div>
           <div class="gallery-card__overlay">
             <h3 class="gallery-card__title">Culinary Performance Yolk</h3>
@@ -482,7 +586,8 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <h3>Samarth Eggs</h3>
-        <p style="color: var(--gray);">Leading wholesale supplier of premium fresh farm eggs. Delivering nutritional excellence daily to commercial culinary operations, markets, and homes.</p>
+        <p style="color: var(--gray);">Leading wholesale supplier of premium fresh farm eggs. Delivering nutritional
+          excellence daily to commercial culinary operations, markets, and homes.</p>
         <div class="footer-socials">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -513,23 +618,31 @@
       </div>
       <div class="footer-col">
         <h3>Newsletter</h3>
-        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and nutrition guides.</p>
-        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and
+          nutrition guides.</p>
+        <form class="newsletter-form" action="#" method="POST"
+          onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
           <input type="email" placeholder="Your Email Address" required>
           <button type="submit">Join</button>
         </form>
       </div>
     </div>
-    <div class="container footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
-      <p style="margin: 0;">&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.</p>
+    <div class="container footer-bottom"
+      style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+      <p style="margin: 0;">&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.
+      </p>
       <div style="display: flex; align-items: center; gap: 10px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="90" height="30" style="vertical-align: middle;">
-          <rect width="300" height="100" rx="15" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
-          <text x="35" y="65" font-family="'Inter', sans-serif" font-weight="900" font-size="42" fill="#018549">fssai</text>
-          <path d="M150 25 C170 25, 185 45, 185 65 C185 67, 180 70, 178 70 C165 70, 150 55, 150 25 Z" fill="#f2aa34"/>
-          <path d="M150 25 C130 25, 115 45, 115 65 C115 67, 120 70, 122 70 C135 70, 150 55, 150 25 Z" fill="#018549"/>
-          <text x="200" y="45" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#333">FOOD SAFETY</text>
-          <text x="200" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#666">CERTIFIED</text>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="90" height="30"
+          style="vertical-align: middle;">
+          <rect width="300" height="100" rx="15" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2" />
+          <text x="35" y="65" font-family="'Inter', sans-serif" font-weight="900" font-size="42"
+            fill="#018549">fssai</text>
+          <path d="M150 25 C170 25, 185 45, 185 65 C185 67, 180 70, 178 70 C165 70, 150 55, 150 25 Z" fill="#f2aa34" />
+          <path d="M150 25 C130 25, 115 45, 115 65 C115 67, 120 70, 122 70 C135 70, 150 55, 150 25 Z" fill="#018549" />
+          <text x="200" y="45" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#333">FOOD
+            SAFETY</text>
+          <text x="200" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="14"
+            fill="#666">CERTIFIED</text>
         </svg>
         <span style="font-size: 0.8rem; color: var(--gray);">Reg: 30260214123368066</span>
       </div>
@@ -539,7 +652,8 @@
   <a href="#" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
   <!-- Floating WhatsApp Widget -->
-  <a href="https://wa.me/917738515150?text=Hello%20Samarth%20Eggs%20Center%2C%20I%20would%20like%20to%20make%20an%20inquiry%20regarding%20farm-fresh%20eggs%20supply." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/917738515150?text=Hello%20Samarth%20Eggs%20Center%2C%20I%20would%20like%20to%20make%20an%20inquiry%20regarding%20farm-fresh%20eggs%20supply."
+    class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -548,4 +662,5 @@
   <script src="js/gallery.js" defer></script>
   <script src="js/lazyload.js" defer></script>
 </body>
+
 </html>

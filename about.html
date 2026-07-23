@@ -1,37 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Samarth Eggs Center</title>
-  <meta name="description" content="Learn about Samarth Eggs Center story, mission, vision, and our state-of-the-art cold storage infrastructure. Serving fresh eggs since 2016.">
-  
+  <title>About Us | Samarth Eggs Center - Fresh Egg Supplier in Mumbai</title>
+  <meta name="description" content="Learn about Samarth Eggs Center, leading wholesale and retail fresh egg supplier in Sewri Mumbai since 2016. Sourcing biosecure farm eggs daily.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Anti Gravity">
+  <meta name="theme-color" content="#f4b400">
+
+  <!-- Resource Hints & Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- Canonical & Social Metas -->
   <link rel="canonical" href="https://samartheggscenter.com/about.html">
-  <meta property="og:title" content="About Us | Samarth Eggs Center">
-  <meta property="og:description" content="Learn about Samarth Eggs Center story, mission, vision, and our state-of-the-art cold storage infrastructure.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Samarth Eggs Center">
+  <meta property="og:title" content="About Us | Samarth Eggs Center - Fresh Egg Supplier in Mumbai">
+  <meta property="og:description" content="Learn about Samarth Eggs Center, leading wholesale and retail fresh egg supplier in Sewri Mumbai since 2016.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://samartheggscenter.com/about.html">
-  <meta property="og:image" content="https://samartheggscenter.com/logo.jpeg">
-  
-  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <meta property="og:image" content="https://samartheggscenter.com/assets/images/logo/logo.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About Us | Samarth Eggs Center">
+  <meta name="twitter:description" content="Learn about Samarth Eggs Center, leading wholesale and retail fresh egg supplier in Sewri Mumbai since 2016.">
+  <meta name="twitter:image" content="https://samartheggscenter.com/assets/images/logo/logo.webp">
+
+  <!-- Favicon Set & PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/logo/logo.webp">
+  <link rel="apple-touch-icon" href="assets/images/logo/logo.webp">
+
+  <!-- Icons CDN & CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+
+  <!-- AboutPage & BreadcrumbList JSON-LD Schema -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Samarth Eggs Center",
+      "description": "Learn about Samarth Eggs Center story, mission, vision, and state-of-the-art cold storage infrastructure.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Samarth Eggs Center",
+        "logo": "https://samartheggscenter.com/assets/images/logo/logo.webp"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://samartheggscenter.com/index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About Us",
+          "item": "https://samartheggscenter.com/about.html"
+        }
+      ]
+    }
+  ]
+  </script>
   <style>
     body {
       background-color: #F5F5F5 !important;
     }
+
     .section-padding {
       background-color: transparent !important;
       background: transparent !important;
     }
+
     .mission-vision-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: var(--spacing-lg);
       margin-top: var(--spacing-xl);
     }
+
     .mv-card {
       background: rgba(255, 255, 255, 0.45);
       backdrop-filter: blur(12px);
@@ -42,24 +100,29 @@
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
+
     .mv-card:hover {
       background: rgba(255, 255, 255, 0.8);
       transform: translateY(-6px);
       box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.07);
       border-color: rgba(255, 255, 255, 0.7);
     }
+
     .mv-card i {
       font-size: 2.5rem;
       color: var(--primary);
       margin-bottom: var(--spacing-sm);
       transition: transform 0.4s ease;
     }
+
     .mv-card:hover i {
       transform: scale(1.1);
     }
+
     .infra-section {
       background-color: var(--gray-light);
     }
+
     .infra-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -74,6 +137,7 @@
       text-align: center;
       margin-top: var(--spacing-lg);
     }
+
     .cert-item {
       padding: var(--spacing-md);
       background: rgba(255, 255, 255, 0.45);
@@ -84,12 +148,14 @@
       box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.02);
       transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
+
     .cert-item:hover {
       background: rgba(255, 255, 255, 0.85);
       transform: translateY(-4px);
       box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.06);
       border-color: rgba(255, 255, 255, 0.7);
     }
+
     .cert-item i {
       font-size: 2rem;
       color: var(--primary);
@@ -97,6 +163,7 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Preloader -->
@@ -111,10 +178,11 @@
   <header class="scrolled">
     <div class="container navbar">
       <a href="index.html" class="logo" style="display: flex; align-items: center; gap: var(--spacing-sm);">
-        <img src="assets/images/logo/logo.jpeg" alt="Samarth Eggs Mascot Logo" style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
+        <img src="assets/images/logo/logo.webp" alt="Samarth Eggs Mascot Logo"
+          style="border-radius: var(--radius-sm); border: 2px solid var(--primary);">
         <span class="logo-text">SAMARTH EGGS</span>
       </a>
-      
+
       <button class="mobile-menu-toggle" aria-label="Toggle Navigation" aria-expanded="false" aria-controls="nav-links">
         <span></span>
         <span></span>
@@ -128,13 +196,21 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+918080515150" class="btn btn-primary" style="display: block; text-align: center; color: var(--dark) !important; padding: 0.8rem;"><i class="fas fa-phone"></i> Call Us</a></li>
-        <li class="mobile-only-action" style="margin-top: var(--spacing-xs);"><a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="display: block; text-align: center; color: var(--white) !important; padding: 0.8rem;"><i class="fab fa-whatsapp"></i> Chat WhatsApp</a></li>
+        <li class="mobile-only-action" style="margin-top: var(--spacing-md);"><a href="tel:+918080515150"
+            class="btn btn-primary"
+            style="display: block; text-align: center; color: var(--dark) !important; padding: 0.8rem;"><i
+              class="fas fa-phone"></i> Call Us</a></li>
+        <li class="mobile-only-action" style="margin-top: var(--spacing-xs);"><a href="#"
+            class="btn btn-secondary whatsapp-chat-trigger"
+            style="display: block; text-align: center; color: var(--white) !important; padding: 0.8rem;"><i
+              class="fab fa-whatsapp"></i> Chat WhatsApp</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="tel:+918080515150" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fas fa-phone"></i> Call</a>
-        <a href="#" class="btn btn-secondary whatsapp-chat-trigger" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
+        <a href="tel:+918080515150" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i
+            class="fas fa-phone"></i> Call</a>
+        <a href="#" class="btn btn-secondary whatsapp-chat-trigger"
+          style="padding: 0.5rem 1.2rem; font-size: 0.75rem;"><i class="fab fa-whatsapp"></i> Chat</a>
       </div>
     </div>
   </header>
@@ -142,9 +218,12 @@
   <!-- Banner Header -->
   <div class="page-header about-header-bg">
     <div class="container">
-      <span class="hero-eyebrow" style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: var(--nagpal-yellow); margin-bottom: 0.5rem;">Poultry Pioneers Since 2016</span>
+      <span class="hero-eyebrow"
+        style="background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.2); color: var(--nagpal-yellow); margin-bottom: 0.5rem;">Poultry
+        Pioneers Since 2016</span>
       <h1>Our Story &amp; Philosophy</h1>
-      <p style="color: rgba(255, 255, 255, 0.85);">Committed to fresh farm supply chain, biosecure nesting, and food safety standards.</p>
+      <p style="color: rgba(255, 255, 255, 0.85);">Committed to fresh farm supply chain, biosecure nesting, and food
+        safety standards.</p>
     </div>
   </div>
 
@@ -152,15 +231,21 @@
   <section class="section-padding">
     <div class="container reveal-item">
       <!-- Premium Frosted Glass Card Wrapper -->
-      <div style="background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.6); padding: var(--spacing-xl); border-radius: 24px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.03); margin-bottom: var(--spacing-xl);">
+      <div
+        style="background: rgba(255, 255, 255, 0.45); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.6); padding: var(--spacing-xl); border-radius: 24px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.03); margin-bottom: var(--spacing-xl);">
         <div class="about-summary" style="margin: 0;">
           <div>
             <h2 style="margin-top: 0; color: var(--nagpal-green);">From Humble Roots to Leading Supplier</h2>
-            <p>Founded with the core goal of supplying unprocessed, fresh, hygienic eggs, Samarth Eggs Center has grown from a single poultry distribution channel into a reliable commercial supply partner servicing over 500 hotels, retail bakeries, and food companies.</p>
-            <p style="margin-bottom: 0;">We source daily from our modern, Bio-Secured farms where layers are cared for in stress-free conditions, fed a customized nutrient-balanced mash, and undergo clean mechanical packaging procedures.</p>
+            <p>Founded with the core goal of supplying unprocessed, fresh, hygienic eggs, Samarth Eggs Center has grown
+              from a single poultry distribution channel into a reliable commercial supply partner servicing over 500
+              hotels, retail bakeries, and food companies.</p>
+            <p style="margin-bottom: 0;">We source daily from our modern, Bio-Secured farms where layers are cared for
+              in stress-free conditions, fed a customized nutrient-balanced mash, and undergo clean mechanical packaging
+              procedures.</p>
           </div>
           <div>
-            <img src="assets/images/about/about-story.webp" alt="Poultry farm hens feeding" loading="lazy" style="width: 100%; height: 320px; object-fit: cover; object-position: center bottom; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+            <img src="assets/images/about/about-story.webp" alt="Poultry farm hens feeding" loading="lazy"
+              style="width: 100%; height: 320px; object-fit: cover; object-position: center bottom; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
           </div>
         </div>
       </div>
@@ -170,12 +255,14 @@
         <div class="mv-card">
           <i class="fas fa-bullseye"></i>
           <h3 style="color: var(--dark);">Our Mission</h3>
-          <p>To deliver farm-to-table freshness daily, optimizing delivery logistics for food manufacturers while maintaining the highest international hygiene and nutritional standards.</p>
+          <p>To deliver farm-to-table freshness daily, optimizing delivery logistics for food manufacturers while
+            maintaining the highest international hygiene and nutritional standards.</p>
         </div>
         <div class="mv-card">
           <i class="fas fa-eye"></i>
           <h3 style="color: var(--dark);">Our Vision</h3>
-          <p>To establish Samarth Eggs Center as the gold standard of premium egg supply nationwide, leading through sustainable farming, automated sorting, and cold storage innovations.</p>
+          <p>To establish Samarth Eggs Center as the gold standard of premium egg supply nationwide, leading through
+            sustainable farming, automated sorting, and cold storage innovations.</p>
         </div>
       </div>
     </div>
@@ -185,12 +272,15 @@
   <section class="section-padding infra-section">
     <div class="container infra-grid reveal-item">
       <div>
-        <img src="assets/images/about/cold-storage.webp" alt="Cold storage egg warehouse crates" loading="lazy" style="width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+        <img src="assets/images/about/cold-storage.webp" alt="Cold storage egg warehouse crates" loading="lazy"
+          style="width: 100%; height: 350px; object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
       </div>
       <div>
         <h2>Modern Warehouse &amp; Cold Storage</h2>
-        <p>Egg freshness is highly sensitive to external temperatures. To preserve the high protein content and thick yolk structure, Samarth Eggs Center operates custom-built temperature-controlled hubs.</p>
-        <p>Our packaging units process up to 100,000 eggs per day, utilizing mechanical graders to separate sizes (Small, Medium, Large, Extra Large) and reject cracked shells instantly using light-candling inspections.</p>
+        <p>Egg freshness is highly sensitive to external temperatures. To preserve the high protein content and thick
+          yolk structure, Samarth Eggs Center operates custom-built temperature-controlled hubs.</p>
+        <p>Our packaging units process up to 100,000 eggs per day, utilizing mechanical graders to separate sizes
+          (Small, Medium, Large, Extra Large) and reject cracked shells instantly using light-candling inspections.</p>
       </div>
     </div>
   </section>
@@ -204,16 +294,25 @@
       </div>
       <div class="grid-3">
         <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:250px;">
-          <img src="assets/images/about/farm-overview.webp" alt="Poultry farm buildings" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-          <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">Farm Overview</div>
+          <img src="assets/images/about/farm-overview.webp" alt="Poultry farm buildings" loading="lazy"
+            style="width:100%; height:100%; object-fit:cover;">
+          <div
+            style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">
+            Farm Overview</div>
         </div>
         <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:250px;">
-          <img src="assets/images/about/workers-collect.webp" alt="Farmer collecting fresh eggs" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-          <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">Egg Harvesting</div>
+          <img src="assets/images/about/workers-collect.webp" alt="Farmer collecting fresh eggs" loading="lazy"
+            style="width:100%; height:100%; object-fit:cover;">
+          <div
+            style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">
+            Egg Harvesting</div>
         </div>
         <div style="position:relative; border-radius:var(--radius-md); overflow:hidden; height:250px;">
-          <img src="assets/images/about/packaging-line.webp" alt="Egg sorting packaging line" loading="lazy" style="width:100%; height:100%; object-fit:cover;">
-          <div style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">Packaging Line</div>
+          <img src="assets/images/about/packaging-line.webp" alt="Egg sorting packaging line" loading="lazy"
+            style="width:100%; height:100%; object-fit:cover;">
+          <div
+            style="position:absolute; bottom:0; left:0; width:100%; background:rgba(17,17,17,0.8); color:white; padding:10px; font-size:0.9rem; text-align:center; font-weight:600;">
+            Packaging Line</div>
         </div>
       </div>
     </div>
@@ -228,20 +327,29 @@
         <p>Our operations comply with key food safety, sanitation, and dietary inspection standards.</p>
       </div>
       <div class="certs-grid reveal-item">
-        <div class="cert-item" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 220px;">
+        <div class="cert-item"
+          style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; min-height: 220px;">
           <div style="margin-bottom: var(--spacing-xs);">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="120" height="40" style="vertical-align: middle;">
-              <rect width="300" height="100" rx="15" fill="#f9f9f9" stroke="#018549" stroke-width="2"/>
-              <text x="35" y="65" font-family="'Inter', sans-serif" font-weight="900" font-size="42" fill="#018549">fssai</text>
-              <path d="M150 25 C170 25, 185 45, 185 65 C185 67, 180 70, 178 70 C165 70, 150 55, 150 25 Z" fill="#f2aa34"/>
-              <path d="M150 25 C130 25, 115 45, 115 65 C115 67, 120 70, 122 70 C135 70, 150 55, 150 25 Z" fill="#018549"/>
-              <text x="200" y="45" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#333">FOOD SAFETY</text>
-              <text x="200" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#666">CERTIFIED</text>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="120" height="40"
+              style="vertical-align: middle;">
+              <rect width="300" height="100" rx="15" fill="#f9f9f9" stroke="#018549" stroke-width="2" />
+              <text x="35" y="65" font-family="'Inter', sans-serif" font-weight="900" font-size="42"
+                fill="#018549">fssai</text>
+              <path d="M150 25 C170 25, 185 45, 185 65 C185 67, 180 70, 178 70 C165 70, 150 55, 150 25 Z"
+                fill="#f2aa34" />
+              <path d="M150 25 C130 25, 115 45, 115 65 C115 67, 120 70, 122 70 C135 70, 150 55, 150 25 Z"
+                fill="#018549" />
+              <text x="200" y="45" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#333">FOOD
+                SAFETY</text>
+              <text x="200" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="14"
+                fill="#666">CERTIFIED</text>
             </svg>
           </div>
           <h3 style="font-size: 1.1rem; color: var(--dark); margin-bottom: 5px;">FSSAI Registered</h3>
           <p style="font-size: 0.8rem; color: var(--gray); margin-bottom: 12px;">Reg No: 30260214123368066</p>
-          <a href="assets/docs/fssai-receipt.pdf" target="_blank" class="btn btn-outline" style="font-size: 0.75rem; padding: 6px 12px; border-width: 1px; border-color: var(--nagpal-green); color: var(--nagpal-green); font-weight: 600;"><i class="fas fa-file-pdf"></i> View FSSAI Receipt</a>
+          <a href="assets/docs/fssai-receipt.pdf" target="_blank" class="btn btn-outline"
+            style="font-size: 0.75rem; padding: 6px 12px; border-width: 1px; border-color: var(--nagpal-green); color: var(--nagpal-green); font-weight: 600;"><i
+              class="fas fa-file-pdf"></i> View FSSAI Receipt</a>
         </div>
         <div class="cert-item">
           <i class="fas fa-shield-halved"></i>
@@ -267,7 +375,8 @@
     <div class="container footer-grid">
       <div class="footer-col">
         <h3>Samarth Eggs</h3>
-        <p style="color: var(--gray);">Leading wholesale supplier of premium fresh farm eggs. Delivering nutritional excellence daily to commercial culinary operations, markets, and homes.</p>
+        <p style="color: var(--gray);">Leading wholesale supplier of premium fresh farm eggs. Delivering nutritional
+          excellence daily to commercial culinary operations, markets, and homes.</p>
         <div class="footer-socials">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
@@ -298,23 +407,31 @@
       </div>
       <div class="footer-col">
         <h3>Newsletter</h3>
-        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and nutrition guides.</p>
-        <form class="newsletter-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+        <p style="color: var(--gray);">Subscribe to our monthly newsletter for market pricing, egg recipe ideas, and
+          nutrition guides.</p>
+        <form class="newsletter-form" action="#" method="POST"
+          onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
           <input type="email" placeholder="Your Email Address" required>
           <button type="submit">Join</button>
         </form>
       </div>
     </div>
-    <div class="container footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
-      <p style="margin: 0;">&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.</p>
+    <div class="container footer-bottom"
+      style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-sm);">
+      <p style="margin: 0;">&copy; 2026 Samarth Eggs Center. All Rights Reserved. Built with Premium Quality Guidelines.
+      </p>
       <div style="display: flex; align-items: center; gap: 10px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="90" height="30" style="vertical-align: middle;">
-          <rect width="300" height="100" rx="15" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2"/>
-          <text x="35" y="65" font-family="'Inter', sans-serif" font-weight="900" font-size="42" fill="#018549">fssai</text>
-          <path d="M150 25 C170 25, 185 45, 185 65 C185 67, 180 70, 178 70 C165 70, 150 55, 150 25 Z" fill="#f2aa34"/>
-          <path d="M150 25 C130 25, 115 45, 115 65 C115 67, 120 70, 122 70 C135 70, 150 55, 150 25 Z" fill="#018549"/>
-          <text x="200" y="45" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#333">FOOD SAFETY</text>
-          <text x="200" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="14" fill="#666">CERTIFIED</text>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="90" height="30"
+          style="vertical-align: middle;">
+          <rect width="300" height="100" rx="15" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="2" />
+          <text x="35" y="65" font-family="'Inter', sans-serif" font-weight="900" font-size="42"
+            fill="#018549">fssai</text>
+          <path d="M150 25 C170 25, 185 45, 185 65 C185 67, 180 70, 178 70 C165 70, 150 55, 150 25 Z" fill="#f2aa34" />
+          <path d="M150 25 C130 25, 115 45, 115 65 C115 67, 120 70, 122 70 C135 70, 150 55, 150 25 Z" fill="#018549" />
+          <text x="200" y="45" font-family="'Inter', sans-serif" font-weight="700" font-size="16" fill="#333">FOOD
+            SAFETY</text>
+          <text x="200" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="14"
+            fill="#666">CERTIFIED</text>
         </svg>
         <span style="font-size: 0.8rem; color: var(--gray);">Reg: 30260214123368066</span>
       </div>
@@ -324,7 +441,8 @@
   <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-chevron-up"></i></button>
 
   <!-- Floating WhatsApp Widget -->
-  <a href="https://wa.me/917738515150?text=Hello%20Samarth%20Eggs%20Center%2C%20I%20would%20like%20to%20make%20an%20inquiry%20regarding%20farm-fresh%20eggs%20supply." class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/917738515150?text=Hello%20Samarth%20Eggs%20Center%2C%20I%20would%20like%20to%20make%20an%20inquiry%20regarding%20farm-fresh%20eggs%20supply."
+    class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
@@ -333,4 +451,5 @@
   <script src="js/scroll.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
+
 </html>

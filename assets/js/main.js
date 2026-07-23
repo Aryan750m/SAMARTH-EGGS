@@ -3,15 +3,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Dismiss Preloader
   const preloader = document.getElementById('preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
+    const hidePreloader = () => {
       preloader.style.opacity = '0';
       preloader.style.visibility = 'hidden';
-    });
-    // Fallback in case load event already fired or delayed
-    setTimeout(() => {
-      preloader.style.opacity = '0';
-      preloader.style.visibility = 'hidden';
-    }, 1500);
+      preloader.style.pointerEvents = 'none';
+      setTimeout(() => { preloader.style.display = 'none'; }, 500);
+    };
+
+    if (document.readyState === 'complete') {
+      hidePreloader();
+    } else {
+      window.addEventListener('load', hidePreloader);
+      setTimeout(hidePreloader, 1000);
+    }
   }
 
   // 2. Scroll Reveal Intersection Observer
@@ -25,9 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, {
-      threshold: 0.15
+      threshold: 0,
+      rootMargin: '0px 0px 50px 0px'
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
+
+    // Safety Fallback: Reveal all elements after delay to prevent unrevealed elements on mobile or slow devices
+    setTimeout(() => {
+      revealElements.forEach(el => el.classList.add('revealed'));
+    }, 800);
   }
 });

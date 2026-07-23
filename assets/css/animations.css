@@ -109,3 +109,15 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item,
+  .animate-fade-up,
+  .animate-fade-left,
+  .animate-fade-right {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}

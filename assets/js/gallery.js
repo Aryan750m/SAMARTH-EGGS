@@ -17,10 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const match = filterValue === 'all' || item.getAttribute('data-category') === filterValue;
           if (match) {
             item.style.display = 'block';
-            requestAnimationFrame(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'scale(1)';
-            });
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
           } else {
             item.style.opacity = '0';
             item.style.transform = 'scale(0.95)';
