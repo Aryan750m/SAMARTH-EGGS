@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Products | Samarth Eggs Center - Wholesale &amp; Retail Eggs Mumbai</title>
-  <meta name="description" content="Explore fresh farm eggs, Nagpal white eggs, organic eggs, brown country eggs, and duck eggs at wholesale and retail rates in Mumbai. Daily delivery.">
+  <meta name="description"
+    content="Explore fresh farm eggs, Nagpal white eggs, organic eggs, brown country eggs, and duck eggs at wholesale and retail rates in Mumbai. Daily delivery.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="Anti Gravity">
   <meta name="theme-color" content="#f4b400">
@@ -20,13 +21,15 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Samarth Eggs Center">
   <meta property="og:title" content="Our Products | Samarth Eggs Center - Wholesale &amp; Retail Eggs Mumbai">
-  <meta property="og:description" content="Explore fresh farm eggs, Nagpal white eggs, organic eggs, brown country eggs, and duck eggs at wholesale and retail rates in Mumbai.">
+  <meta property="og:description"
+    content="Explore fresh farm eggs, Nagpal white eggs, organic eggs, brown country eggs, and duck eggs at wholesale and retail rates in Mumbai.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://samartheggscenter.com/products.html">
   <meta property="og:image" content="https://samartheggscenter.com/assets/images/logo/logo.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Our Products | Samarth Eggs Center">
-  <meta name="twitter:description" content="Explore fresh farm eggs, Nagpal white eggs, organic eggs, brown country eggs, and duck eggs at wholesale and retail rates in Mumbai.">
+  <meta name="twitter:description"
+    content="Explore fresh farm eggs, Nagpal white eggs, organic eggs, brown country eggs, and duck eggs at wholesale and retail rates in Mumbai.">
   <meta name="twitter:image" content="https://samartheggscenter.com/assets/images/logo/logo.webp">
 
   <!-- Favicon Set & PWA Manifest -->
@@ -216,10 +219,10 @@
 
       <!-- Products Grid -->
       <div class="product-grid" id="catalog-grid">
-        <!-- Card 1 -->
+        <!-- Card 11 -->
         <div class="product-card" data-category="white">
           <div class="product-image">
-            <img src="assets/images/products/white-eggs.webp" alt="Nagpal Premium White Eggs" loading="lazy">
+            <img src="assets/images/products/nagpal-white-pyramid.webp" alt="White Eggs" loading="lazy">
             <span class="product-tag"
               style="background-color: var(--primary); color: var(--dark); font-weight: 700;">Best Seller (85%
               Supply)</span>
@@ -227,8 +230,31 @@
           <div class="product-details-content">
             <h3 class="product-title"
               style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700;">Nagpal Premium
-              White Eggs</h3>
+              Eggs</h3>
             <p>Authorized distributor of Nagpal Eggs. Premium high-grade, clean white eggs collected daily and sorted
+              for optimal sizes. Preferred by commercial operations.</p>
+            <div class="product-meta" style="margin-bottom: var(--spacing-xs); display: flex; justify-content: center;">
+              <span class="product-price" style="color: var(--nagpal-green); font-weight: 600;">Wholesale Rates</span>
+            </div>
+            <a href="https://wa.me/917738515150?text=Hello%20Samarth%20Eggs%2C%20I%20would%20like%20to%20get%20an%20enquiry%20for%20Nagpal%20Premium%20White%20Eggs."
+              target="_blank" class="whatsapp-btn">
+              <i class="fab fa-whatsapp"></i> Get Enquiry on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="product-card" data-category="white">
+          <div class="product-image">
+            <img src="assets/images/products/white-eggs.webp" alt="White Eggs" loading="lazy">
+            <span class="product-tag"
+              style="background-color: var(--primary); color: var(--dark); font-weight: 700;">Fresh White</span>
+          </div>
+          <div class="product-details-content">
+            <h3 class="product-title"
+              style="color: var(--nagpal-green); font-family: var(--font-headings); font-weight: 700;">
+              White Eggs</h3>
+            <p>Premium high-grade, clean white eggs collected daily and sorted
               for optimal sizes. Preferred by commercial operations.</p>
             <div class="product-meta" style="margin-bottom: var(--spacing-xs); display: flex; justify-content: center;">
               <span class="product-price" style="color: var(--nagpal-green); font-weight: 600;">Wholesale Rates</span>
@@ -449,7 +475,7 @@
       cards.forEach(card => {
         const itemCategory = card.getAttribute('data-category');
         if (category === 'all' || itemCategory === category) {
-          card.style.display = 'block';
+          card.style.display = '';
           setTimeout(() => { card.style.opacity = '1'; card.style.transform = 'scale(1)'; }, 50);
         } else {
           card.style.opacity = '0';
