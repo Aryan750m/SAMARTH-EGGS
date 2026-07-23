@@ -467,15 +467,14 @@
 /* Feature Benefits Cards - Why Choose Us */
 .feature-card {
   text-align: left;
-  padding: 28px 24px;
-  /* Increased vertical padding */
+  padding: 24px;
   background: var(--white);
   border: 1px solid var(--gray-border);
   border-radius: var(--radius-lg);
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: 12px;
 }
 
 .feature-card:hover {
@@ -484,17 +483,24 @@
   border-color: var(--nagpal-green);
 }
 
+.feature-card__header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .feature-card__icon {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
   border-radius: var(--radius-md);
   background: rgba(1, 133, 73, 0.08);
   color: var(--nagpal-green);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-2xs);
+  font-size: 1.4rem;
+  margin: 0;
   transition: all var(--transition-fast);
 }
 
@@ -509,6 +515,7 @@
   color: var(--nagpal-green);
   font-weight: 700;
   margin: 0;
+  line-height: 1.2;
 }
 
 .feature-card p {
